@@ -167,8 +167,8 @@ by 4–5. See `docs/08_results_baseline.md` and `results/`.
 * ÖKOBAUDAT: BMWSB, free use with attribution.
 * AGRIBALYSE 4: ADEME, Licence Ouverte / Etalab 2.0.
 * Literature values: cited per row (`source_id` → `data/sources/sources.csv`).
-* The code is released under the MIT licence (see `pyproject.toml`); the papers in `papers/`
-  keep their publishers' copyrights.
+* The code and the authors' own data are released under the MIT licence (`LICENSE`); the third-party data above keep
+  their own terms, and the source papers keep their publishers' copyrights (they are therefore not redistributed here).
 
 ## Citing
 
