@@ -11,7 +11,7 @@ one-to-one, scales it to industrial conditions with a transparent engineering mo
 2016), and benchmarks the results against conventional masonry products and the group's own
 WCF–OPC foamed block (Nežerka et al. 2023).
 
-**Try it online:** the application runs on Streamlit Community Cloud at **[APP-URL-TO-BE-INSERTED](https://APP-URL-TO-BE-INSERTED)**
+**Try it online:** the application runs on Streamlit Community Cloud at **[micp-lca.streamlit.app](https://micp-lca.streamlit.app)**
 (a hosted instance sleeps after a few days without visits and wakes on the next visit; data saved in it are not persistent,
 so download the reports, CSVs and scenario files you want to keep).
 

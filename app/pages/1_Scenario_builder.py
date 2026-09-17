@@ -11,10 +11,10 @@ import streamlit as st
 import yaml
 from plotly.subplots import make_subplots
 
-from micp_lca.inventory import Params
-from micp_lca.parametric import available_parameters, describe_sweep, find_parameter, sweep
 from utils import (ADDITIONAL, CORE, PALETTE, category_label, contribution_figure, cost_block, download_button, fu_label, get_data,
-                   impacts_table, reload_data, run)
+                   impacts_table, reload_data, run)  # utils puts src/ on sys.path; import it before micp_lca
+from micp_lca.inventory import Params  # noqa: E402
+from micp_lca.parametric import available_parameters, describe_sweep, find_parameter, sweep  # noqa: E402
 
 st.set_page_config(page_title="Scenario builder", page_icon="🧪", layout="wide")
 data = get_data()

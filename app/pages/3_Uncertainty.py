@@ -6,9 +6,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-from micp_lca.sensitivity import oat_sensitivity
-from micp_lca.uncertainty import MCResult, MCSettings, monte_carlo
-from utils import ADDITIONAL, CORE, PALETTE, category_label, download_button, fu_label, get_data, run
+from utils import ADDITIONAL, CORE, PALETTE, category_label, download_button, fu_label, get_data, run  # utils puts src/ on sys.path
+from micp_lca.sensitivity import oat_sensitivity  # noqa: E402
+from micp_lca.uncertainty import MCResult, MCSettings, monte_carlo  # noqa: E402
 
 st.set_page_config(page_title="Uncertainty", page_icon="🎲", layout="wide")
 data = get_data()

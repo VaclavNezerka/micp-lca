@@ -5,8 +5,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from micp_lca.cost import INDICATIVE_NOTE, cost_summary, cost_table
-from utils import PALETTE, download_button, fu_label, get_data, run
+from utils import PALETTE, download_button, fu_label, get_data, run  # utils puts src/ on sys.path
+from micp_lca.cost import INDICATIVE_NOTE, cost_summary, cost_table  # noqa: E402
 
 st.set_page_config(page_title="Cost", page_icon="💶", layout="wide")
 data = get_data()
