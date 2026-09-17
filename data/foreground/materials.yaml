@@ -1,0 +1,97 @@
+# Waste fines stabilised in the papers, with the processing chain assumed for their preparation.
+# All are secondary materials entering the system burden-free (EN 15804+A2, polluter-pays);
+# only the processing after the end-of-waste point (crushing, milling, screening, transport) is included.
+#
+# processing steps: electricity_kWh_per_t (Czech grid), wear_parts_kg_per_t (chromium steel), notes
+# transport_km: recycling yard -> biocementation plant (lorry); NEZERKA2023LCA used 52–70 km around Prague
+# portlandite_wt: crystalline Ca(OH)2 available for carbonation (XRD); theoretical CO2 uptake = 0.5946 kg CO2 per kg Ca(OH)2
+# caco3_wt: initial CaCO3 content (XRD, all polymorphs)
+# product_bulk_density_kg_m3: bulk density of the consolidated (biocemented) product, used for per-m3 results
+
+wcf_g:
+  name: WCF-G – fines from a 3-year-old vibro-compacted concrete gutter (C12/15–C20/25), 0–0.25 mm fraction ground
+  source_id: HOLECEK2024
+  oxides_wt: {CaO: 35.62, SiO2: 36.66, Al2O3: 10.06, Fe2O3: 8.29, SO3: 1.67, MgO: 1.87, Na2O: 1.74, K2O: 3.00}
+  portlandite_wt: 0.5
+  caco3_wt: 29.57
+  gypsum_wt: 0.0
+  mean_particle_um: 5.08
+  d90_um: 7.72
+  processing:
+    - {step: crushing, electricity_kWh_per_t: 1.5}
+    - {step: high_speed_milling, electricity_kWh_per_t: 6.25, wear_parts_kg_per_t: 0.268, source_id: NEZERKA2023LCA}
+    - {step: screening, electricity_kWh_per_t: 0.3}
+  transport_km: 70
+  product_bulk_density_kg_m3: 1100
+
+wcf_h:
+  name: WCF-H – fines from 60-year-old D1 highway concrete (C16/20–C25/30), hammer-crushed and high-speed milled <1 mm
+  source_id: HOLECEK2024
+  oxides_wt: {CaO: 31.35, SiO2: 42.92, Al2O3: 11.81, Fe2O3: 6.13, SO3: 0.83, MgO: 2.16, Na2O: 1.39, K2O: 2.45}
+  portlandite_wt: 0.2
+  caco3_wt: 35.13
+  gypsum_wt: 0.0
+  mean_particle_um: 7.33
+  d90_um: 13.30
+  processing:
+    - {step: crushing, electricity_kWh_per_t: 1.5}
+    - {step: high_speed_milling, electricity_kWh_per_t: 6.25, wear_parts_kg_per_t: 0.268, source_id: NEZERKA2023LCA}
+    - {step: screening, electricity_kWh_per_t: 0.3}
+  transport_km: 70
+  product_bulk_density_kg_m3: 1100
+
+wcf_c:
+  name: WCF-C – fines from ground reinforced-concrete columns (Walter Motors factory, 1911), coarser, contains gypsum and 5.5 % portlandite
+  source_id: KLIKOVA2025CCC
+  oxides_wt: {CaO: 32.51, SiO2: 46.18, Al2O3: 8.89, Fe2O3: 5.10, SO3: 1.66, MgO: 1.53, Na2O: 1.16, K2O: 2.15}
+  portlandite_wt: 5.5
+  caco3_wt: 20.0
+  gypsum_wt: 2.0
+  mean_particle_um: 15.86
+  d90_um: 36.91
+  processing:
+    - {step: crushing, electricity_kWh_per_t: 1.5}
+    - {step: high_speed_milling, electricity_kWh_per_t: 6.25, wear_parts_kg_per_t: 0.268, source_id: NEZERKA2023LCA}
+    - {step: screening, electricity_kWh_per_t: 0.3}
+  transport_km: 70
+  product_bulk_density_kg_m3: 1100
+
+hm1:
+  name: HM1 – heterogeneous calcium-rich demolition residue (crushed concrete + autoclaved aerated concrete), sub-mm fraction
+  source_id: NEZERKA2026PRE
+  oxides_wt: {CaO: 29.48, SiO2: 48.66, Al2O3: 12.17, Fe2O3: 1.79, SO3: 2.34, MgO: 1.75, Na2O: 0.14, K2O: 3.09, LOI: 20.0}
+  portlandite_wt: 0.0
+  caco3_wt: 30.0
+  gypsum_wt: 0.0
+  mean_particle_um: 222.8
+  d90_um: 518.2
+  processing:
+    - {step: crushing, electricity_kWh_per_t: 1.5}
+    - {step: screening, electricity_kWh_per_t: 0.5}
+  transport_km: 70
+  product_bulk_density_kg_m3: 1250
+
+hm2:
+  name: HM2 – heterogeneous silica-rich demolition residue (masonry mortar + clay brick fragments), sub-mm fraction
+  source_id: NEZERKA2026PRE
+  oxides_wt: {CaO: 13.77, SiO2: 59.70, Al2O3: 15.04, Fe2O3: 2.57, SO3: 1.59, MgO: 2.43, Na2O: 0.58, K2O: 3.51, LOI: 16.9}
+  portlandite_wt: 0.0
+  caco3_wt: 15.0
+  gypsum_wt: 0.0
+  mean_particle_um: 225.8
+  d90_um: 502.4
+  processing:
+    - {step: crushing, electricity_kWh_per_t: 1.5}
+    - {step: screening, electricity_kWh_per_t: 0.5}
+  transport_km: 70
+  product_bulk_density_kg_m3: 1250
+
+waste_gypsum_plaster:
+  name: Waste gypsum plaster recovered from plasterboard recycling, finely ground
+  source_id: NEZERKA2026PRE
+  portlandite_wt: 0.0
+  caco3_wt: 0.0
+  gypsum_wt: 95.0
+  processing:
+    - {step: paper_separation_and_grinding, electricity_kWh_per_t: 12.0}
+  transport_km: 100

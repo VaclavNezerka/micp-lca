@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.venv/
+
+# generated / local artefacts
+results/
+data/db/*.sqlite
+data/user/*
+!data/user/README.md
+
+# raw ÖKOBAUDAT documents (third-party datasets cached for provenance; re-created by scripts/fetch_oekobaudat.py)
+data/background/oekobaudat/raw/
+
+# not part of the public release: publisher PDFs, the manuscript and the LaTeX template
+papers/
+paper/
+TeX_paper_template/
+
+# tooling
+.claude/
+.streamlit/secrets.toml

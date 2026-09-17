@@ -1,0 +1,154 @@
+# Microorganisms and their cultivation protocols (per litre of cultivation medium) as used in the papers.
+# harvest_od600: assumed optical density of the culture at harvest (not reported in the papers);
+#   the volume of culture needed per litre of OD600 = target suspension is target_od600 / harvest_od600.
+# pathway keys are interpreted by micp_lca.chemistry:
+#   ureolytic          : CO(NH2)2 + 2 H2O + Ca2+ -> CaCO3 + 2 NH4+   (Ca from CaCl2, carbonate C from urea)
+#   organic_acid       : Ca(C3H5O3)2 + 6 O2 -> CaCO3 + 5 CO2 + 5 H2O (Ca and C from calcium lactate)
+#   fungal             : same reagent stoichiometry as organic_acid (Ca-lactate) or ureolysis-free CaCl2 route
+#                        (carbonate from metabolic CO2 / atmosphere), see protocol
+
+sporosarcina_pasteurii_DSM33:
+  name: Sporosarcina pasteurii DSM 33 (ATCC 11859)
+  pathway: ureolytic
+  source_id: HOLECEK2024
+  cultivation:
+    medium: tsb_30
+    supplements: {urea: 20.0}        # g/L
+    temperature_C: 28
+    duration_h: 48
+    shaking_rpm: 120
+    harvest_od600: 2.5
+    target_od600: 5.0
+    harvest: centrifugation           # 10 000 g, 10 min, 4 °C; resuspended in saline
+    resuspension_medium: saline
+  alternative_cultivation_media:
+    feather: {medium: feather_hydrolysate_sp, supplements: {urea: 20.0}}
+  notes: Peak ureolytic activity 36–48 h (KLIKOVA2025ESPR).
+
+sutcliffiella_cohnii_DSM6307:
+  name: Sutcliffiella (Bacillus) cohnii DSM 6307
+  pathway: organic_acid
+  source_id: NEZERKA2026PRE
+  cultivation:
+    medium: lb_25
+    supplements_medium: sesquicarbonate_buffer_100ml
+    temperature_C: 30
+    duration_h: 24
+    shaking_rpm: 150
+    harvest_od600: 2.5
+    target_od600: 5.0
+    harvest: centrifugation
+    resuspension_medium: saline
+  alternative_cultivation_media:
+    feather: {medium: feather_hydrolysate_sc, supplements_medium: sesquicarbonate_buffer_100ml}
+    lb_12: {medium: lb_12, supplements_medium: sesquicarbonate_buffer_100ml}
+
+alkalihalobacillus_pseudofirmus_DSM8715:
+  name: Alkalihalobacillus (Bacillus) pseudofirmus DSM 8715
+  pathway: organic_acid
+  source_id: KLIKOVA2025CCC
+  cultivation:
+    medium: lb_25
+    supplements_medium: sesquicarbonate_buffer_100ml
+    temperature_C: 30
+    duration_h: 24
+    shaking_rpm: 120
+    harvest_od600: 2.5
+    target_od600: 5.0
+    harvest: centrifugation
+    resuspension_medium: saline
+
+trichoderma_reesei_DSM768:
+  name: Trichoderma reesei DSM 768 (filamentous fungus)
+  pathway: fungal
+  source_id: KLIKOVA2025JECE
+  cultivation:
+    medium: meb_20                    # inoculated as a 5 mm mycelial disc from malt extract agar
+    temperature_C: 28
+    duration_h: 120
+    shaking_rpm: 0
+    harvest_od600: null
+    target_od600: null
+    harvest: none
+    inoculum_note: "Mycelial disc; cultivation burden approximated by 0.01 L malt extract agar per specimen."
+
+# ---------------------------------------------------------------------------------------------
+# Additional pathways / agents for scenario building (literature; not tested by the group)
+
+sporosarcina_pasteurii_altmedia:
+  name: Sporosarcina pasteurii cultivated on low-cost media (literature variants)
+  pathway: ureolytic
+  source_id: NEZERKA2023REV
+  cultivation:
+    medium: nh4_ye_20
+    supplements: {urea: 20.0}
+    temperature_C: 30
+    duration_h: 24
+    shaking_rpm: 150
+    harvest_od600: 2.5
+    target_od600: 5.0
+    harvest: centrifugation
+    resuspension_medium: saline
+  alternative_cultivation_media:
+    corn_steep_liquor: {medium: csl_15, supplements: {urea: 20.0}}
+    lactose_mother_liquor: {medium: lml_15, supplements: {urea: 20.0}}
+    chicken_manure_effluent: {medium: chicken_manure_effluent, supplements: {urea: 20.0}}
+    food_grade_yeast_extract: {medium: food_grade_ye_20, supplements: {urea: 20.0}}
+
+eicp_jack_bean_urease:
+  name: Enzyme-induced carbonate precipitation with crude jack-bean urease (no cultivation; Almajed/Alotaibi)
+  pathway: enzymatic
+  source_id: ALOTAIBI2022
+  cultivation:
+    medium: saline
+    temperature_C: 20
+    duration_h: 0
+    shaking_rpm: 0
+    harvest_od600: null
+    target_od600: null
+    harvest: none
+  notes: The enzyme (jack bean meal) and non-fat milk are dosed in the biocementation solution.
+
+pseudomonas_denitrificans:
+  name: Denitrifying bacteria (Pseudomonas denitrificans / Castellaniella; biogrout by denitrification)
+  pathway: denitrifying
+  source_id: VANPAASSEN2010
+  cultivation:
+    medium: denitrification_medium
+    temperature_C: 30
+    duration_h: 48
+    shaking_rpm: 120
+    harvest_od600: 2.0
+    target_od600: 5.0
+    harvest: centrifugation
+    resuspension_medium: saline
+
+bacillus_acetate_oxidiser:
+  name: Non-ureolytic Bacillus sp. oxidising calcium acetate (self-healing-concrete type route)
+  pathway: organic_acid
+  source_id: PORTER2021
+  cultivation:
+    medium: lb_25
+    supplements_medium: sesquicarbonate_buffer_100ml
+    temperature_C: 30
+    duration_h: 24
+    shaking_rpm: 150
+    harvest_od600: 2.5
+    target_od600: 5.0
+    harvest: centrifugation
+    resuspension_medium: saline
+
+synechococcus_cyanobacteria:
+  name: Cyanobacteria (Synechococcus sp.) - photosynthetic MICP with bicarbonate and light
+  pathway: photosynthetic
+  source_id: PORTER2021
+  light_kWh_per_L_day: 0.03      # LED illumination of the culture/biocementation volume (0.01-0.1)
+  cultivation:
+    medium: bg11_cyanobacteria
+    temperature_C: 28
+    duration_h: 168
+    shaking_rpm: 0
+    harvest_od600: 1.0
+    target_od600: 2.0
+    harvest: centrifugation
+    resuspension_medium: saline

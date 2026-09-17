@@ -1,0 +1,20 @@
+code,ef31_name,unit,ef31_method_uuid,en15804_a2_indicator,core_or_additional
+GWP-total,Climate change,kg CO2 eq,6209b35f-9447-40b5-b68c-a1099e3674a0,GWP-total,core
+GWP-fossil,Climate change-Fossil,kg CO2 eq,7fce5b3a-66b8-4ce1-91e8-a925aee1f186,GWP-fossil,core
+GWP-biogenic,Climate change-Biogenic,kg CO2 eq,706261af-a357-4cc0-a50a-f3033fcbd556,GWP-biogenic,core
+GWP-luluc,Climate change-Land use and land use change,kg CO2 eq,14af9ca7-aa1d-4832-b1d9-ab05a06dcb12,GWP-luluc,core
+ODP,Ozone depletion,kg CFC-11 eq,b5c629d6-def3-11e6-bf01-fe55135034f3,ODP,core
+AP,Acidification,mol H+ eq,b5c611c6-def3-11e6-bf01-fe55135034f3,AP,core
+EP-freshwater,"Eutrophication, freshwater",kg P eq,b53ec18f-7377-4ad3-86eb-cc3f4f276b2b,EP-freshwater,core
+EP-marine,Eutrophication marine,kg N eq,b5c619fa-def3-11e6-bf01-fe55135034f3,EP-marine,core
+EP-terrestrial,"Eutrophication, terrestrial",mol N eq,b5c614d2-def3-11e6-bf01-fe55135034f3,EP-terrestrial,core
+POCP,Photochemical ozone formation - human health,kg NMVOC eq,b5c610fe-def3-11e6-bf01-fe55135034f3,POCP,core
+ADP-minerals&metals,"Resource use, minerals and metals",kg Sb eq,b2ad6494-c78d-11e6-9d9d-cec0c932ce01,ADP-minerals&metals,core
+ADP-fossil,"Resource use, fossils",MJ,b2ad6110-c78d-11e6-9d9d-cec0c932ce01,ADP-fossil,core
+WDP,Water use,m3 world eq deprived,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,WDP,core
+PM,EF-particulate Matter,disease incidence,b5c602c6-def3-11e6-bf01-fe55135034f3,PM,additional
+IRP,"Ionising radiation, human health",kBq U-235 eq,b5c632be-def3-11e6-bf01-fe55135034f3,IRP,additional
+ETP-fw,"Ecotoxicity, freshwater",CTUe,05316e7a-b254-4bea-9cf0-6bf33eb5c630,ETP-fw,additional
+HTP-c,"Human toxicity, cancer",CTUh,2299222a-bbd8-474f-9d4f-4dd1f18aea7c,HTP-c,additional
+HTP-nc,"Human toxicity, non-cancer",CTUh,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,HTP-nc,additional
+SQP,Land use,Pt,b2ad6890-c78d-11e6-9d9d-cec0c932ce01,SQP,additional

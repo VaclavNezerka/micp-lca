@@ -1,0 +1,185 @@
+# Assessment scenarios = protocol + modelling choices. Every key not given falls back to `defaults`.
+#
+#   scale               lab | industrial   (equipment/energy parameter set, see scaleup.yaml)
+#   electricity         background process id for electricity
+#   effluent_treatment  none | ammonia_stripping | struvite   (ureolytic route N by-products)
+#   reagent_optimisation:
+#       urea_to_ca_molar_ratio  : override the lab urea:Ca ratio (lab protocols use ≈13); 1.0 = stoichiometric
+#       nutrient_broth_factor   : multiplier on the nutrient-broth base of the biocementation solution
+#       solution_recirculation_fraction : share of the biocementation solution re-used between doses (0-0.9);
+#                                 reduces make-up water, nutrient base and sterilisation heat, not the consumed reagents
+#   carbonation_uptake_fraction : share of the theoretical CO2 uptake by portlandite carbonation realised in A3
+#   carbon_accounting   EF31 | EN15804A2   (see docs/03_lci_methodology.md)
+#   eol                 landfill | recycling   (modules C1–C4)
+#   module_d            include avoided-burden credits (recovered ammonium sulfate) in module D
+#   transport_chemicals_km, transport_product_km(A4, excluded by default)
+
+defaults:
+  scale: industrial
+  electricity: electricity_CZ_lv
+  effluent_treatment: none
+  carbonation_uptake_fraction: 0.7
+  carbon_accounting: EF31
+  eol: landfill
+  module_d: false
+  transport_chemicals_km: 200
+  transport_media_km: 200
+  transport_feathers_km: 80
+  transport_gypsum_km: 100
+  functional_unit: kg_product      # kg_product | m3_product | kg_caco3_precipitated | m3_MPa
+
+scenarios:
+  # -------- ureolytic route as performed in the laboratory
+  SP_lab_protocol_90d:
+    description: S. pasteurii, WCF-H, 90-day lab protocol reproduced 1:1 (urea 13x excess), industrial energy
+    protocol: sp_wcf_90d
+  SP_lab_protocol_90d_WCFG:
+    description: as above on the finer WCF-G (higher CaCO3 gain and stiffness)
+    protocol: sp_wcf_90d
+    material: wcf_g
+  SP_lab_scale_energy_90d:
+    description: S. pasteurii 90 d with laboratory equipment energy (illustrates the lab-energy artefact)
+    protocol: sp_wcf_90d
+    scale: lab
+  SP_optimised_stoichiometric:
+    description: S. pasteurii, urea dosed stoichiometrically to CaCl2 (urea:Ca = 1.2), ammonia stripping of effluent
+    protocol: sp_wcf_90d
+    reagent_optimisation: {urea_to_ca_molar_ratio: 1.2}
+    effluent_treatment: ammonia_stripping
+  SP_optimised_recirculation:
+    description: S. pasteurii, stoichiometric urea, 80 % recirculation of the biocementation solution (make-up water/nutrients only), ammonia stripping
+    protocol: sp_wcf_90d
+    reagent_optimisation: {urea_to_ca_molar_ratio: 1.2, solution_recirculation_fraction: 0.8}
+    effluent_treatment: ammonia_stripping
+  SP_optimised_struvite_D:
+    description: as SP_optimised_stoichiometric with struvite recovery and module-D fertiliser credit
+    protocol: sp_wcf_90d
+    reagent_optimisation: {urea_to_ca_molar_ratio: 1.2}
+    effluent_treatment: struvite
+    module_d: true
+  SP_feather_media:
+    description: S. pasteurii with feather-hydrolysate cultivation and biocementation media (OTTOVA2026), 28 d
+    protocol: sp_jctb_feather
+  SP_commercial_media_28d:
+    description: S. pasteurii with commercial TSB/NB media (OTTOVA2026), 28 d
+    protocol: sp_jctb_commercial
+  # -------- non-ureolytic route (organic-acid oxidation, Ca-lactate)
+  BC_lactate_30d:
+    description: S. cohnii with Ca-lactate biocementation solution, WCF-C, 30 d repeated dosing (KLIKOVA2025CCC)
+    protocol: bc_wcf_30d_ccc
+  BC_feather_media:
+    description: S. cohnii with feather-hydrolysate media, WCF-C, 28 d (OTTOVA2026)
+    protocol: bc_jctb_feather
+  BC_commercial_media_28d:
+    description: S. cohnii with commercial LB/NB media, WCF-C, 28 d (OTTOVA2026)
+    protocol: bc_jctb_commercial
+  # -------- gypsum-promoted route (preprint 2026)
+  GYP_WCFC_single_dose:
+    description: S. cohnii + 10 % waste gypsum, WCF-C, single nutrient dose, 30 °C (C-G-30-0, prototype recipe)
+    protocol: pre_c_g_30_0
+  GYP_WCFC_repeated:
+    description: S. cohnii + 10 % waste gypsum, WCF-C, repeated dosing 30 d (C-G-30)
+    protocol: pre_c_g_30
+  GYP_HM1_single_dose:
+    description: S. cohnii + 10 % waste gypsum, HM1 demolition residue, single dose (H1-G-30-0)
+    protocol: pre_h1_g_30_0
+  GYP_HM2_single_dose:
+    description: S. cohnii + 10 % waste gypsum, HM2 demolition residue, single dose (H2-G-30-0)
+    protocol: pre_h2_g_30_0
+  GYP_HM2_repeated:
+    description: S. cohnii + 10 % waste gypsum, HM2, repeated dosing (H2-G-30)
+    protocol: pre_h2_g_30
+  GYP_WCFC_single_dose_20C:
+    description: as GYP_WCFC_single_dose but cultivation and curing at 20 °C (energy saving; strength at 20 °C not measured for the gypsum recipe — C-20 without gypsum reached 0.51 vs 1.02 MPa at 30 °C)
+    protocol: pre_c_g_30_0
+    temperature_override_C: 20
+  GYP_WCFC_single_dose_feather:
+    description: prototype recipe with feather-hydrolysate cultivation medium
+    protocol: pre_c_g_30_0
+    cultivation_variant: feather
+  GYP_WCFC_single_dose_EN15804:
+    description: prototype recipe with EN 15804+A2 biogenic carbon accounting (−1/+1)
+    protocol: pre_c_g_30_0
+    carbon_accounting: EN15804A2
+  # -------- fungal route
+  TR_fungal_CaCl2:
+    description: Trichoderma reesei, malt extract broth + CaCl2, WCF-H, 21 d
+    protocol: tr_wcfh_cacl2
+  TR_fungal_lactate:
+    description: Trichoderma reesei, malt extract broth + Ca-lactate, WCF-H, 21 d
+    protocol: tr_wcfh_cal2
+  # -------- abiotic control (no bacteria): gypsum + hydration only
+  ABIOTIC_WCFC_gypsum:
+    description: Negative control N-C-G-30-0 (no bacteria, saline instead of nutrients) – hydration/gypsum reactions only
+    protocol: pre_c_g_30_0
+    abiotic: true
+    fc_override_MPa: 1.92
+
+  # -------- literature pathways for comparison (not tested by the group; Porter et al. 2021 pathway set)
+  LIT_SP_NH4YE_medium:
+    description: S. pasteurii on NH4-YE medium (Deng 2021 type), stoichiometric urea/CaCl2, 30 d (literature reference case)
+    protocol: lit_sp_altmedia_30d
+  LIT_SP_corn_steep_liquor:
+    description: S. pasteurii on corn steep liquor medium (Achal et al. 2010)
+    protocol: lit_sp_altmedia_30d
+    cultivation_variant: corn_steep_liquor
+  LIT_SP_manure_effluent:
+    description: S. pasteurii on chicken-manure biogas effluent medium (Yoosathaporn et al. 2016)
+    protocol: lit_sp_altmedia_30d
+    cultivation_variant: chicken_manure_effluent
+  LIT_EICP:
+    description: Enzyme-induced carbonate precipitation (jack bean urease), no cultivation (Alotaibi et al. 2022 type)
+    protocol: lit_eicp_30d
+  LIT_denitrification:
+    description: Denitrifying biocementation with calcium acetate + calcium nitrate (van Paassen 2010 stoichiometry)
+    protocol: lit_denitrification_30d
+  LIT_acetate_oxidation:
+    description: Non-ureolytic Bacillus on petrochemical calcium acetate (fossil carbon)
+    protocol: lit_acetate_oxidation_30d
+  LIT_photosynthetic:
+    description: Cyanobacterial MICP with bicarbonate and LED light
+    protocol: lit_photosynthetic_30d
+
+benchmarks:
+  AAC_block_ODB:
+    description: Autoclaved aerated concrete block, German industry average (ÖKOBAUDAT), per kg, A1–A3 (+C1–C4)
+    background_process: aac_block_avg
+    bulk_density_kg_m3: 428
+    fc_MPa: 3.0
+    eol_modules_from_dataset: true
+  AAC_block_Environdec_JCLEPRO:
+    description: AAC Sysmic Idro (Gasbeton) EPD S-P-03048 as used in NEZERKA2023LCA, 580 kg/m3, 5 MPa, A1–A3
+    fixed_impacts_per_m3: {GWP-total: 232, ODP: 1.90e-3, AP: 0.63, EP-freshwater: 2.35e-2, EP-marine: 0.36, EP-terrestrial: 2.45, POCP: 1.03, ADP-minerals&metals: 2.69e-3, ADP-fossil: 1790, WDP: 14.0}
+    bulk_density_kg_m3: 580
+    fc_MPa: 5.0
+    source_id: NEZERKA2023LCA
+  WCF_OPC_foamed_block:
+    description: Lightweight foamed block with 60 wt% RCF / 40 wt% CEM I (4/6 SP4 B), NEZERKA2023LCA, per t incl. C1–C4
+    fixed_impacts_per_t: {GWP-total: 334, GWP-fossil: 334, ODP: 1.79e-6, AP: 0.70, EP-freshwater: 3.71e-3, EP-marine: 0.19, EP-terrestrial: 2.09, POCP: 0.57, ADP-minerals&metals: 2.31e-4, ADP-fossil: 2090, WDP: -20.3, PM: 8.37e-6, IRP: 7.61, ETP-fw: 1070, HTP-c: 6.50e-8, HTP-nc: 4.95e-6, SQP: 466}
+    fixed_impacts_A1A3_per_t: {GWP-total: 311.8}
+    bulk_density_kg_m3: 801
+    fc_MPa: 7.1
+    source_id: NEZERKA2023LCA
+  clay_brick_ODB:
+    description: Clay masonry brick, German industry average (ÖKOBAUDAT), per kg
+    background_process: brick_clay_avg
+    bulk_density_kg_m3: 575
+    fc_MPa: 10.0
+  adobe_ODB:
+    description: Adobe (unfired earth block), ÖKOBAUDAT generic, per kg
+    background_process: adobe_block
+    bulk_density_kg_m3: 1200
+    fc_MPa: 2.0
+  concrete_block_ODB:
+    description: Concrete masonry block 2000 kg/m3, ÖKOBAUDAT generic, per kg
+    background_process: concrete_masonry_block
+    bulk_density_kg_m3: 2000
+    fc_MPa: 6.0
+  sand_lime_brick_ODB:
+    description: Sand-lime brick, industry average (ÖKOBAUDAT), per kg
+    background_process: sand_lime_brick
+    bulk_density_kg_m3: 1800
+    fc_MPa: 12.0
+  landfill_WCF_status_quo:
+    description: Status quo for WCF – inert landfill (C4) per kg of fines (no product delivered)
+    background_process: landfill_inert

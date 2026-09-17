@@ -1,0 +1,121 @@
+flow_uuid,flow_name,compartment,ef31_class2,category_code,cf,location,method_uuid,derivation
+08a91e70-3ddc-11dd-a2a9-0050c2490048,ammonia,air,"Emissions to air, unspecified",AP,3.02,GLO,b5c611c6-def3-11e6-bf01-fe55135034f3,Unknown derivation
+08a91e70-3ddc-11dd-96e5-0050c2490048,nitrogen dioxide,air,"Emissions to air, unspecified",AP,0.74,GLO,b5c611c6-def3-11e6-bf01-fe55135034f3,Unknown derivation
+fe0acd60-3ddc-11dd-ac48-0050c2490048,sulfur dioxide,air,"Emissions to air, unspecified",AP,1.31,GLO,b5c611c6-def3-11e6-bf01-fe55135034f3,Calculated
+08a91e70-3ddc-11dd-9c15-0050c2490048,carbon dioxide (biogenic),air,"Emissions to air, unspecified",GWP-total,0,GLO,6209b35f-9447-40b5-b68c-a1099e3674a0,Calculated
+08a91e70-3ddc-11dd-923d-0050c2490048,carbon dioxide (fossil),air,"Emissions to air, unspecified",GWP-total,1,GLO,6209b35f-9447-40b5-b68c-a1099e3674a0,Calculated
+adcb79f3-89cf-45fb-b0b2-65558cb2af26,Carbon dioxide (land use change),air,"Emissions to air, unspecified",GWP-total,1,GLO,6209b35f-9447-40b5-b68c-a1099e3674a0,Calculated
+fe0acd60-3ddc-11dd-a8e8-0050c2490048,methane (biogenic),air,"Emissions to air, unspecified",GWP-total,27,GLO,6209b35f-9447-40b5-b68c-a1099e3674a0,Calculated
+08a91e70-3ddc-11dd-9610-0050c2490048,methane (fossil),air,"Emissions to air, unspecified",GWP-total,29.8,GLO,6209b35f-9447-40b5-b68c-a1099e3674a0,Calculated
+08a91e70-3ddc-11dd-94c3-0050c2490048,nitrous oxide,air,"Emissions to air, unspecified",GWP-total,273,GLO,6209b35f-9447-40b5-b68c-a1099e3674a0,Calculated
+08a91e70-3ddc-11dd-9c15-0050c2490048,carbon dioxide (biogenic),air,"Emissions to air, unspecified",GWP-biogenic,0,GLO,706261af-a357-4cc0-a50a-f3033fcbd556,Calculated
+fe0acd60-3ddc-11dd-a8e8-0050c2490048,methane (biogenic),air,"Emissions to air, unspecified",GWP-biogenic,27,GLO,706261af-a357-4cc0-a50a-f3033fcbd556,Calculated
+08a91e70-3ddc-11dd-923d-0050c2490048,carbon dioxide (fossil),air,"Emissions to air, unspecified",GWP-fossil,1,GLO,7fce5b3a-66b8-4ce1-91e8-a925aee1f186,Calculated
+08a91e70-3ddc-11dd-9610-0050c2490048,methane (fossil),air,"Emissions to air, unspecified",GWP-fossil,29.8,GLO,7fce5b3a-66b8-4ce1-91e8-a925aee1f186,Calculated
+08a91e70-3ddc-11dd-94c3-0050c2490048,nitrous oxide,air,"Emissions to air, unspecified",GWP-fossil,273,GLO,7fce5b3a-66b8-4ce1-91e8-a925aee1f186,Calculated
+adcb79f3-89cf-45fb-b0b2-65558cb2af26,Carbon dioxide (land use change),air,"Emissions to air, unspecified",GWP-luluc,1,GLO,14af9ca7-aa1d-4832-b1d9-ab05a06dcb12,Calculated
+08a91e70-3ddc-11dd-91be-0050c2490048,particles (PM10),air,"Emissions to air, unspecified",PM,5.48544e-05,GLO,b5c602c6-def3-11e6-bf01-fe55135034f3,Calculated
+08a91e70-3ddc-11dd-9293-0050c2490048,particles (PM2.5),air,"Emissions to air, unspecified",PM,0.000238497,GLO,b5c602c6-def3-11e6-bf01-fe55135034f3,Unknown derivation
+08a91e70-3ddc-11dd-96e5-0050c2490048,nitrogen dioxide,air,"Emissions to air, unspecified",PM,1.6e-06,GLO,b5c602c6-def3-11e6-bf01-fe55135034f3,Unknown derivation
+08a91e70-3ddc-11dd-a2a9-0050c2490048,ammonia,air,"Emissions to air, unspecified",PM,2.1e-05,GLO,b5c602c6-def3-11e6-bf01-fe55135034f3,Unknown derivation
+fe0acd60-3ddc-11dd-ac48-0050c2490048,sulfur dioxide,air,"Emissions to air, unspecified",PM,8e-06,GLO,b5c602c6-def3-11e6-bf01-fe55135034f3,Unknown derivation
+08a91e70-3ddc-11dd-a2a9-0050c2490048,ammonia,air,"Emissions to air, unspecified",EP-marine,0.092,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Calculated
+08a91e70-3ddc-11dd-96b0-0050c2490048,ammonia,freshwater,Emissions to fresh water,EP-marine,0.824,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Estimated
+08a91e70-3ddc-11dd-954a-0050c2490048,ammonia,water,"Emissions to water, unspecified",EP-marine,0.824,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Calculated
+08a91e70-3ddc-11dd-97d4-0050c2490048,ammonium,water,"Emissions to water, unspecified",EP-marine,0.778,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Calculated
+fe0acd60-3ddc-11dd-aaa5-0050c2490048,ammonium,freshwater,Emissions to fresh water,EP-marine,0.778,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Estimated
+fe0acd60-3ddc-11dd-aa31-0050c2490048,nitrate,water,"Emissions to water, unspecified",EP-marine,0.226,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Calculated
+4d9a8790-3ddd-11dd-8d68-0050c2490048,nitrate,freshwater,Emissions to fresh water,EP-marine,0.226,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Estimated
+08a91e70-3ddc-11dd-96e0-0050c2490048,nitrite,freshwater,Emissions to fresh water,EP-marine,0.304,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Estimated
+08a91e70-3ddc-11dd-96e2-0050c2490048,nitrite,water,"Emissions to water, unspecified",EP-marine,0.304,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Calculated
+08a91e70-3ddc-11dd-96e5-0050c2490048,nitrogen dioxide,air,"Emissions to air, unspecified",EP-marine,0.389,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Calculated
+3624d70d-4e4b-4927-9b84-b40e26c58e6d,"nitrogen, total (excluding N2)",water,"Emissions to water, unspecified",EP-marine,1,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Calculated
+e1716164-e906-48e4-ad77-8f2ec4a9a4c5,"nitrogen, total (excluding N2)",freshwater,Emissions to fresh water,EP-marine,1,GLO,b5c619fa-def3-11e6-bf01-fe55135034f3,Estimated
+08a91e70-3ddc-11dd-9787-0050c2490048,phosphate,freshwater,Emissions to fresh water,EP-freshwater,0.33,GLO,b53ec18f-7377-4ad3-86eb-cc3f4f276b2b,Calculated
+08a91e70-3ddc-11dd-9789-0050c2490048,phosphate,water,"Emissions to water, unspecified",EP-freshwater,0.33,GLO,b53ec18f-7377-4ad3-86eb-cc3f4f276b2b,Calculated
+f9df3107-6b59-4067-b920-3c61cf3630c7,"phosphorus, total",freshwater,Emissions to fresh water,EP-freshwater,1,GLO,b53ec18f-7377-4ad3-86eb-cc3f4f276b2b,Calculated
+46854df3-e13d-4a5a-9e11-6319f1f8347e,"phosphorus, total",water,"Emissions to water, unspecified",EP-freshwater,1,GLO,b53ec18f-7377-4ad3-86eb-cc3f4f276b2b,Calculated
+08a91e70-3ddc-11dd-a2a9-0050c2490048,ammonia,air,"Emissions to air, unspecified",EP-terrestrial,13.47,GLO,b5c614d2-def3-11e6-bf01-fe55135034f3,Unknown derivation
+08a91e70-3ddc-11dd-96e5-0050c2490048,nitrogen dioxide,air,"Emissions to air, unspecified",EP-terrestrial,4.26,GLO,b5c614d2-def3-11e6-bf01-fe55135034f3,Unknown derivation
+d79f903e-a73d-4156-95ce-0b094512e74e,nickel (ii),water,"Emissions to water, unspecified",HTP-c,6.2525e-06,GLO,2299222a-bbd8-474f-9d4f-4dd1f18aea7c,Calculated
+41e90548-2125-4f20-a437-ca5d083fec53,nickel (ii),freshwater,Emissions to fresh water,HTP-c,1.1893e-05,GLO,2299222a-bbd8-474f-9d4f-4dd1f18aea7c,Calculated
+9abf6aa9-c299-47ae-b9d7-539d65107fd8,urea,freshwater,Emissions to fresh water,HTP-c,0,GLO,2299222a-bbd8-474f-9d4f-4dd1f18aea7c,Calculated
+f2678361-daf1-4335-b136-080778f13ec4,urea,water,"Emissions to water, unspecified",HTP-c,0,GLO,2299222a-bbd8-474f-9d4f-4dd1f18aea7c,Calculated
+ef39d251-2701-441e-8b6a-06b93d5d332d,urea,air,"Emissions to air, unspecified",HTP-c,0,GLO,2299222a-bbd8-474f-9d4f-4dd1f18aea7c,Calculated
+08a91e70-3ddc-11dd-96b0-0050c2490048,ammonia,freshwater,Emissions to fresh water,HTP-nc,3.9313e-09,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-954a-0050c2490048,ammonia,water,"Emissions to water, unspecified",HTP-nc,1.9664e-09,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-a2a9-0050c2490048,ammonia,air,"Emissions to air, unspecified",HTP-nc,1.3262e-08,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+fe0acd60-3ddc-11dd-aaa5-0050c2490048,ammonium,freshwater,Emissions to fresh water,HTP-nc,3.9313e-09,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-97d4-0050c2490048,ammonium,water,"Emissions to water, unspecified",HTP-nc,1.9664e-09,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+2b46185b-7bf9-4fe3-b280-509d2098f15f,calcium carbonate,water,"Emissions to water, unspecified",HTP-nc,4.9824e-10,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+12aa05cc-a34c-4d20-96ad-75ed5a847272,calcium carbonate,freshwater,Emissions to fresh water,HTP-nc,9.9632e-10,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+b2084898-7642-4d51-a6c9-2700bb43f767,calcium sulfate,water,"Emissions to water, unspecified",HTP-nc,6.2999e-09,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+f4ec5521-80e5-4841-b36b-daf64afab193,calcium sulfate,freshwater,Emissions to fresh water,HTP-nc,1.2598e-08,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-924e-0050c2490048,carbon monoxide (fossil),air,"Emissions to air, unspecified",HTP-nc,0,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-9508-0050c2490048,chloride,freshwater,Emissions to fresh water,HTP-nc,0,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-950a-0050c2490048,chloride,water,"Emissions to water, unspecified",HTP-nc,0,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-97ff-0050c2490048,hydrogen chloride,water,"Emissions to water, unspecified",HTP-nc,0,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+fe0acd60-3ddc-11dd-aab0-0050c2490048,hydrogen chloride,air,"Emissions to air, unspecified",HTP-nc,0,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-97fd-0050c2490048,hydrogen chloride,freshwater,Emissions to fresh water,HTP-nc,0,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+fe0acd60-3ddc-11dd-a8e8-0050c2490048,methane (biogenic),air,"Emissions to air, unspecified",HTP-nc,4.8548e-08,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+41e90548-2125-4f20-a437-ca5d083fec53,nickel (ii),freshwater,Emissions to fresh water,HTP-nc,6.6923e-07,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+d79f903e-a73d-4156-95ce-0b094512e74e,nickel (ii),water,"Emissions to water, unspecified",HTP-nc,3.5185e-07,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-94c3-0050c2490048,nitrous oxide,air,"Emissions to air, unspecified",HTP-nc,1.6045e-08,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-a302-0050c2490048,non-methane volatile organic compounds,air,"Emissions to air, unspecified",HTP-nc,6.2186e-08,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-924e-0050c2490048,carbon monoxide (fossil),air,"Emissions to air, unspecified",POCP,0.0456,GLO,b5c610fe-def3-11e6-bf01-fe55135034f3,Calculated
+fe0acd60-3ddc-11dd-a8e8-0050c2490048,methane (biogenic),air,"Emissions to air, unspecified",POCP,0.0101,GLO,b5c610fe-def3-11e6-bf01-fe55135034f3,Calculated
+08a91e70-3ddc-11dd-9610-0050c2490048,methane (fossil),air,"Emissions to air, unspecified",POCP,0.0101,GLO,b5c610fe-def3-11e6-bf01-fe55135034f3,Calculated
+08a91e70-3ddc-11dd-96e5-0050c2490048,nitrogen dioxide,air,"Emissions to air, unspecified",POCP,1,GLO,b5c610fe-def3-11e6-bf01-fe55135034f3,Calculated
+08a91e70-3ddc-11dd-a302-0050c2490048,non-methane volatile organic compounds,air,"Emissions to air, unspecified",POCP,1,GLO,b5c610fe-def3-11e6-bf01-fe55135034f3,Calculated
+fe0acd60-3ddc-11dd-ac48-0050c2490048,sulfur dioxide,air,"Emissions to air, unspecified",POCP,0.0811,GLO,b5c610fe-def3-11e6-bf01-fe55135034f3,Calculated
+5fdac403-9f2c-4a10-b8d6-5367cc9d2d9b,freshwater,resource,Renewable material resources from water,WDP,42.95,GLO,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,Unknown derivation
+5fdac403-9f2c-4a10-b8d6-5367cc9d2d9b,freshwater,resource,Renewable material resources from water,WDP,1.79,CZ,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,Unknown derivation
+4f462198-40cd-4184-8733-86648a20dc3f,ground water,resource,Renewable material resources from water,WDP,42.95,GLO,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,Unknown derivation
+4f462198-40cd-4184-8733-86648a20dc3f,ground water,resource,Renewable material resources from water,WDP,1.79,CZ,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,Unknown derivation
+c506b970-7b92-452f-8d6f-05d4f203d958,lake water,resource,Renewable material resources from water,WDP,42.95,GLO,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,Unknown derivation
+c506b970-7b92-452f-8d6f-05d4f203d958,lake water,resource,Renewable material resources from water,WDP,1.79,CZ,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,Unknown derivation
+805a7346-1664-4483-afe3-4b224be5e361,river water,resource,Renewable material resources from water,WDP,42.95,GLO,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,Unknown derivation
+805a7346-1664-4483-afe3-4b224be5e361,river water,resource,Renewable material resources from water,WDP,1.79,CZ,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,Unknown derivation
+419682fe-60fb-4b43-be89-bf2824b51104,water,resource,Renewable material resources from water,WDP,1.79,CZ,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,Unknown derivation
+419682fe-60fb-4b43-be89-bf2824b51104,water,resource,Renewable material resources from water,WDP,42.95,GLO,b2ad66ce-c78d-11e6-9d9d-cec0c932ce01,Unknown derivation
+8a313a02-e251-11e6-bf01-fe55135034f3,carbon monoxide (biogenic),air,"Emissions to air, unspecified",HTP-nc,0,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-9610-0050c2490048,methane (fossil),air,"Emissions to air, unspecified",HTP-nc,4.8548e-08,GLO,7cfdcfcf-b222-4b26-888a-a55f9fbf7ac8,Calculated
+08a91e70-3ddc-11dd-a2a9-0050c2490048,ammonia,air,"Emissions to air, unspecified",ETP-fw,134.42,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-96b0-0050c2490048,ammonia,freshwater,Emissions to fresh water,ETP-fw,2493.2,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-954a-0050c2490048,ammonia,water,"Emissions to water, unspecified",ETP-fw,2493.2,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+fe0acd60-3ddc-11dd-aaa5-0050c2490048,ammonium,freshwater,Emissions to fresh water,ETP-fw,2493.2,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-97d4-0050c2490048,ammonium,water,"Emissions to water, unspecified",ETP-fw,2493.2,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+fe0acd60-3ddc-11dd-a296-0050c2490048,calcium,freshwater,Emissions to fresh water,ETP-fw,0,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-9233-0050c2490048,calcium,water,"Emissions to water, unspecified",ETP-fw,0,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+12aa05cc-a34c-4d20-96ad-75ed5a847272,calcium carbonate,freshwater,Emissions to fresh water,ETP-fw,76.616,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+2b46185b-7bf9-4fe3-b280-509d2098f15f,calcium carbonate,water,"Emissions to water, unspecified",ETP-fw,76.616,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+fbba8589-61ba-48fb-9bd2-ed4a5fb9e6b6,calcium dichloride,freshwater,Emissions to fresh water,ETP-fw,1.637,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+379eb96d-eda2-4667-8eea-fd4b4e212951,calcium dichloride,water,"Emissions to water, unspecified",ETP-fw,1.637,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+09df3a86-f995-4525-9352-c8ff8c1156ad,calcium hydroxide,freshwater,Emissions to fresh water,ETP-fw,10.52,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+ee3d659b-c7e5-48cc-af93-a22d8c469f58,calcium hydroxide,water,"Emissions to water, unspecified",ETP-fw,10.52,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+8a313a02-e251-11e6-bf01-fe55135034f3,carbon monoxide (biogenic),air,"Emissions to air, unspecified",ETP-fw,0.022833,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-924e-0050c2490048,carbon monoxide (fossil),air,"Emissions to air, unspecified",ETP-fw,0.022833,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-9508-0050c2490048,chloride,freshwater,Emissions to fresh water,ETP-fw,301.44,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-950a-0050c2490048,chloride,water,"Emissions to water, unspecified",ETP-fw,301.44,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+fe0acd60-3ddc-11dd-aab0-0050c2490048,hydrogen chloride,air,"Emissions to air, unspecified",ETP-fw,21.086,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-97fd-0050c2490048,hydrogen chloride,freshwater,Emissions to fresh water,ETP-fw,301.44,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-97ff-0050c2490048,hydrogen chloride,water,"Emissions to water, unspecified",ETP-fw,301.44,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+eae682f3-e10b-49f1-ae5e-687b518e983a,lactic acid,water,"Emissions to water, unspecified",ETP-fw,1033.8,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+fe0acd60-3ddc-11dd-a8e8-0050c2490048,methane (biogenic),air,"Emissions to air, unspecified",ETP-fw,0.31974,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-9610-0050c2490048,methane (fossil),air,"Emissions to air, unspecified",ETP-fw,0.31974,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+41e90548-2125-4f20-a437-ca5d083fec53,nickel (ii),freshwater,Emissions to fresh water,ETP-fw,27049.47608091963,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+d79f903e-a73d-4156-95ce-0b094512e74e,nickel (ii),water,"Emissions to water, unspecified",ETP-fw,27049.47608091963,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+08a91e70-3ddc-11dd-a302-0050c2490048,non-methane volatile organic compounds,air,"Emissions to air, unspecified",ETP-fw,8.6069,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+631b2cb3-35e6-4c01-ab28-9b49dbb115df,phosphorus,freshwater,Emissions to fresh water,ETP-fw,2.0314,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+410e1215-9953-46ce-a878-2079353eb801,phosphorus,water,"Emissions to water, unspecified",ETP-fw,2.0314,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+eebe71ed-57e1-44ce-87a5-8b143a481789,potassium chloride,freshwater,Emissions to fresh water,ETP-fw,6.2668,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+14b0b630-4c26-4542-9b0f-d2834f9e3877,potassium chloride,water,"Emissions to water, unspecified",ETP-fw,6.2668,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+8b3f14c1-7d34-4498-8913-40b81044cf59,sodium chloride,freshwater,Emissions to fresh water,ETP-fw,1.4817,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+4c2fea71-c33e-4819-b549-8f577cfb0481,sodium chloride,water,"Emissions to water, unspecified",ETP-fw,1.4817,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+1da73409-bfc6-4dc8-a90a-bb75bb8ce8e3,sodium hydrogen carbonate,freshwater,Emissions to fresh water,ETP-fw,2.9822,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+30d3f015-f1ff-4de2-a60d-11c13744e042,sodium hydrogen carbonate,water,"Emissions to water, unspecified",ETP-fw,2.9822,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+9426ed68-0c4d-4475-aac9-e34af57ca63a,sodium hydroxide,freshwater,Emissions to fresh water,ETP-fw,265.48,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+ada25932-1e35-4702-a583-3cab5968d6e3,sodium hydroxide,water,"Emissions to water, unspecified",ETP-fw,265.48,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+ef39d251-2701-441e-8b6a-06b93d5d332d,urea,air,"Emissions to air, unspecified",ETP-fw,0.60386,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+9abf6aa9-c299-47ae-b9d7-539d65107fd8,urea,freshwater,Emissions to fresh water,ETP-fw,2.9538,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated
+f2678361-daf1-4335-b136-080778f13ec4,urea,water,"Emissions to water, unspecified",ETP-fw,2.9538,GLO,05316e7a-b254-4bea-9cf0-6bf33eb5c630,Calculated

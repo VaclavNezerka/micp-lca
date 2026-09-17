@@ -1,0 +1,82 @@
+source_id,sample_code,material,organism,medium,treatment,duration_d,temperature_C,gypsum_wt_pct,property,value,sd,unit,notes
+HOLECEK2024,G-B-14,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,14,28,0,CaCO3_content,39.46,,wt%,XRD all polymorphs
+HOLECEK2024,G-B-30,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,30,28,0,CaCO3_content,42.10,,wt%,
+HOLECEK2024,G-B-60,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,60,28,0,CaCO3_content,42.62,,wt%,
+HOLECEK2024,G-B-90,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,90,28,0,CaCO3_content,43.56,,wt%,
+HOLECEK2024,G-S-90,wcf_g,none (sterile),saline,saline additions,90,28,0,CaCO3_content,32.51,,wt%,sterile control
+HOLECEK2024,WCF-G,wcf_g,none,none,raw material,0,,0,CaCO3_content,29.57,,wt%,
+HOLECEK2024,H-B-14,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,14,28,0,CaCO3_content,38.95,,wt%,
+HOLECEK2024,H-B-30,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,30,28,0,CaCO3_content,41.32,,wt%,
+HOLECEK2024,H-B-60,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,60,28,0,CaCO3_content,45.20,,wt%,
+HOLECEK2024,H-B-90,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,90,28,0,CaCO3_content,46.35,,wt%,
+HOLECEK2024,H-S-90,wcf_h,none (sterile),saline,saline additions,90,28,0,CaCO3_content,37.39,,wt%,sterile control
+HOLECEK2024,WCF-H,wcf_h,none,none,raw material,0,,0,CaCO3_content,35.13,,wt%,
+HOLECEK2024,G-B-14,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,14,28,0,porosity,72.8,,%,MIP
+HOLECEK2024,G-B-30,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,30,28,0,porosity,70.5,,%,MIP
+HOLECEK2024,G-B-60,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,60,28,0,porosity,68.3,,%,MIP
+HOLECEK2024,G-B-90,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,90,28,0,porosity,61.0,,%,MIP
+HOLECEK2024,G-S-90,wcf_g,none (sterile),saline,saline additions,90,28,0,porosity,74.8,,%,MIP
+HOLECEK2024,H-B-14,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,14,28,0,porosity,61.8,,%,MIP
+HOLECEK2024,H-B-30,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,30,28,0,porosity,57.2,,%,MIP
+HOLECEK2024,H-B-60,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,60,28,0,porosity,55.6,,%,MIP
+HOLECEK2024,H-B-90,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,90,28,0,porosity,50.9,,%,MIP
+HOLECEK2024,H-S-90,wcf_h,none (sterile),saline,saline additions,90,28,0,porosity,65.6,,%,MIP
+HOLECEK2024,G-B-14,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,14,28,0,indentation_stiffness,3.558,0.636,N/mm,
+HOLECEK2024,G-B-30,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,30,28,0,indentation_stiffness,8.060,4.507,N/mm,
+HOLECEK2024,G-B-60,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,60,28,0,indentation_stiffness,9.123,7.146,N/mm,
+HOLECEK2024,G-B-90,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,90,28,0,indentation_stiffness,11.992,2.170,N/mm,
+HOLECEK2024,G-S-90,wcf_g,none (sterile),saline,saline additions,90,28,0,indentation_stiffness,5.942,1.675,N/mm,
+HOLECEK2024,H-B-14,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,14,28,0,indentation_stiffness,5.011,2.328,N/mm,
+HOLECEK2024,H-B-30,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,30,28,0,indentation_stiffness,5.947,1.975,N/mm,
+HOLECEK2024,H-B-60,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,60,28,0,indentation_stiffness,7.732,1.527,N/mm,
+HOLECEK2024,H-B-90,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 48-72 h,90,28,0,indentation_stiffness,7.479,2.453,N/mm,
+HOLECEK2024,H-S-90,wcf_h,none (sterile),saline,saline additions,90,28,0,indentation_stiffness,8.330,1.935,N/mm,
+HOLECEK2024,AAC,aac,none,none,commercial Gasbeton AAC 580 kg/m3 (5 MPa),,,,indentation_stiffness,54.731,,N/mm,reference
+KLIKOVA2025CCC,G-SP,wcf_g,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 30 d,30,28,0,relative_porosity,65.8,,% of sterile,vs G-0
+KLIKOVA2025CCC,G-BP,wcf_g,A. pseudofirmus DSM 8715,LB/NB + Ca-lactate,repeated BS 30 d,30,30,0,relative_porosity,69.5,,% of sterile,
+KLIKOVA2025CCC,G-BC,wcf_g,S. cohnii DSM 6307,LB/NB + Ca-lactate,repeated BS 30 d,30,30,0,relative_porosity,60.6,,% of sterile,
+KLIKOVA2025CCC,H-SP,wcf_h,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 30 d,30,28,0,relative_porosity,85.5,,% of sterile,
+KLIKOVA2025CCC,H-BP,wcf_h,A. pseudofirmus DSM 8715,LB/NB + Ca-lactate,repeated BS 30 d,30,30,0,relative_porosity,80.1,,% of sterile,
+KLIKOVA2025CCC,H-BC,wcf_h,S. cohnii DSM 6307,LB/NB + Ca-lactate,repeated BS 30 d,30,30,0,relative_porosity,84.7,,% of sterile,
+KLIKOVA2025CCC,C-SP,wcf_c,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 30 d,30,28,2,relative_porosity,76.6,,% of sterile,
+KLIKOVA2025CCC,C-BP,wcf_c,A. pseudofirmus DSM 8715,LB/NB + Ca-lactate,repeated BS 30 d,30,30,2,relative_porosity,66.4,,% of sterile,AFt phases formed
+KLIKOVA2025CCC,C-BC,wcf_c,S. cohnii DSM 6307,LB/NB + Ca-lactate,repeated BS 30 d,30,30,2,relative_porosity,77.0,,% of sterile,AFt phases formed; stiffness +172 % vs sterile
+KLIKOVA2025CCC,C-BC (fib.),wcf_c,S. cohnii DSM 6307,LB/NB + Ca-lactate,feather fibres,30,30,2,relative_porosity,114.2,,% of sterile,fibres increased porosity
+KLIKOVA2025CCC,C-BC (fib.+comp.),wcf_c,S. cohnii DSM 6307,LB/NB + Ca-lactate,feather fibres + 20 % compaction,30,30,2,relative_porosity,62.5,,% of sterile,
+KLIKOVA2025CCC,C-BC,wcf_c,S. cohnii DSM 6307,LB/NB + Ca-lactate,repeated BS 30 d,30,30,2,relative_stiffness,272,,% of sterile,indentation (stage 3)
+KLIKOVA2025CCC,C-SP,wcf_c,S. pasteurii DSM 33,TSB/NB + urea + CaCl2,repeated BS 30 d,30,28,2,relative_stiffness,110,,% of sterile,<=10 % increase
+OTTOVA2026,Med-C-SC,wcf_c,S. cohnii DSM 6307,LB / NB + Ca-lactate,14 doses 48 h,28,30,2,indentation_stiffness,5.1,,N/mm,
+OTTOVA2026,Feath-C-SC,wcf_c,S. cohnii DSM 6307,feather hydrolysate + Ca-lactate,14 doses 48 h,28,30,2,indentation_stiffness,7.5,,N/mm,
+OTTOVA2026,Med-H-SC,wcf_h,S. cohnii DSM 6307,LB / NB + Ca-lactate,14 doses 48 h,28,30,0,indentation_stiffness,16.1,,N/mm,highest stiffness
+OTTOVA2026,Med-H-SP,wcf_h,S. pasteurii DSM 33,TSB / NB + urea + CaCl2,14 doses 48 h,28,28,0,indentation_stiffness,6.5,,N/mm,"<7 N/mm reported"
+OTTOVA2026,Feath-H-SP,wcf_h,S. pasteurii DSM 33,feather hydrolysate + urea + CaCl2,14 doses 48 h,28,28,0,indentation_stiffness,6.0,,N/mm,"<7 N/mm reported"
+OTTOVA2026,Med-C-SP,wcf_c,S. pasteurii DSM 33,TSB / NB + urea + CaCl2,14 doses 48 h,28,28,2,CaCO3_gain_abs,4.25,,wt%,vs sterile control
+OTTOVA2026,Feath-C-SP,wcf_c,S. pasteurii DSM 33,feather hydrolysate + urea + CaCl2,14 doses 48 h,28,28,2,CaCO3_gain_abs,6.70,,wt%,
+OTTOVA2026,Med-C-SC,wcf_c,S. cohnii DSM 6307,LB / NB + Ca-lactate,14 doses 48 h,28,30,2,CaCO3_gain_abs,1.99,,wt%,ettringite detected
+OTTOVA2026,Feath-C-SC,wcf_c,S. cohnii DSM 6307,feather hydrolysate + Ca-lactate,14 doses 48 h,28,30,2,CaCO3_gain_abs,6.27,,wt%,
+OTTOVA2026,Med-H-SP,wcf_h,S. pasteurii DSM 33,TSB / NB + urea + CaCl2,14 doses 48 h,28,28,0,CaCO3_gain_abs,7.38,,wt%,
+OTTOVA2026,Feath-H-SP,wcf_h,S. pasteurii DSM 33,feather hydrolysate + urea + CaCl2,14 doses 48 h,28,28,0,CaCO3_gain_abs,6.00,,wt%,
+OTTOVA2026,Med-H-SC,wcf_h,S. cohnii DSM 6307,LB / NB + Ca-lactate,14 doses 48 h,28,30,0,CaCO3_gain_abs,4.25,,wt%,
+OTTOVA2026,Feath-H-SC,wcf_h,S. cohnii DSM 6307,feather hydrolysate + Ca-lactate,14 doses 48 h,28,30,0,CaCO3_gain_abs,4.09,,wt%,unbonded structure
+KLIKOVA2025JECE,TR-C,wcf_h,T. reesei DSM 768,malt extract broth + CaCl2,refresh 3-5 d,21,28,0,CaCO3_gain_abs,5.0,,wt%,approx. +5 % calcite vs controls
+KLIKOVA2025JECE,TR-L,wcf_h,T. reesei DSM 768,malt extract broth + Ca-lactate,refresh 3-5 d,21,28,0,CaCO3_gain_abs,5.5,,wt%,higher total CaCO3 with Ca-lactate
+NEZERKA2026PRE,C-30,wcf_c,S. cohnii DSM 6307,LB / NB + Ca-lactate,repeated dosing 30 d,30,30,0,compressive_strength,1.02,0.22,MPa,cylinders 25x50 mm
+NEZERKA2026PRE,C-20,wcf_c,S. cohnii DSM 6307,LB / NB + Ca-lactate,repeated dosing 30 d,30,20,0,compressive_strength,0.51,0.03,MPa,
+NEZERKA2026PRE,C-G-30,wcf_c,S. cohnii DSM 6307,LB / NB + Ca-lactate,repeated dosing 30 d + 10 % gypsum,30,30,10,compressive_strength,1.88,0.36,MPa,
+NEZERKA2026PRE,N-C-30,wcf_c,none (negative control),saline,repeated saline 30 d,30,30,0,compressive_strength,0.76,0.08,MPa,
+NEZERKA2026PRE,N-C-G-30,wcf_c,none (negative control),saline,repeated saline + 10 % gypsum,30,30,10,compressive_strength,1.55,0.38,MPa,
+NEZERKA2026PRE,N-C-G-30-0,wcf_c,none (negative control),saline,single saline + 10 % gypsum,30,30,10,compressive_strength,1.92,0.08,MPa,strongest WCF-C specimen
+NEZERKA2026PRE,H1-G-30,hm1,S. cohnii DSM 6307,LB / NB + Ca-lactate,repeated dosing 30 d + 10 % gypsum,30,30,10,compressive_strength,0.39,0.07,MPa,
+NEZERKA2026PRE,H1-G-30-0,hm1,S. cohnii DSM 6307,LB / NB + Ca-lactate,single dose + 10 % gypsum,30,30,10,compressive_strength,0.54,0.03,MPa,
+NEZERKA2026PRE,H2-G-30,hm2,S. cohnii DSM 6307,LB / NB + Ca-lactate,repeated dosing 30 d + 10 % gypsum,30,30,10,compressive_strength,0.15,0.03,MPa,
+NEZERKA2026PRE,H2-G-30-0,hm2,S. cohnii DSM 6307,LB / NB + Ca-lactate,single dose + 10 % gypsum,30,30,10,compressive_strength,0.70,0.03,MPa,strongest heterogeneous residue
+NEZERKA2026PRE,N-H1-G-30-0,hm1,none (negative control),saline,single saline + 10 % gypsum,30,30,10,compressive_strength,0.09,0.06,MPa,
+NEZERKA2026PRE,HM1 prototype cubes,hm1,S. cohnii DSM 6307,LB / NB + Ca-lactate,single dose + 10 % gypsum (110x70x30 mm block),30,30,10,compressive_strength,0.40,0.10,MPa,six 30 mm cubes: 0.31 0.37 0.40 0.46 0.55 0.28
+NEZERKA2026PRE,C-G-30,wcf_c,S. cohnii DSM 6307,LB / NB + Ca-lactate,repeated dosing 30 d + 10 % gypsum,30,30,10,AFt_content,7.8,,wt%,XRD crystalline AFt
+NEZERKA2026PRE,C-30,wcf_c,S. cohnii DSM 6307,LB / NB + Ca-lactate,repeated dosing 30 d,30,30,0,AFt_content,3.0,,wt%,
+NEZERKA2026PRE,C-30,wcf_c,S. cohnii DSM 6307,LB / NB + Ca-lactate,repeated dosing 30 d,30,30,0,CaCO3_content,25.5,,wt%,raw WCF-C ≈20 wt%
+NEZERKA2023LCA,4/6 SP4 B,rcf_opc_block,none,none,foamed WCF-OPC block 40/60,28,22,0,compressive_strength,7.1,0.5,MPa,
+NEZERKA2023LCA,4/6 SP4 B,rcf_opc_block,none,none,foamed WCF-OPC block 40/60,28,22,0,thermal_conductivity,0.21,0.02,W/mK,
+NEZERKA2023LCA,4/6 SP4 B,rcf_opc_block,none,none,foamed WCF-OPC block 40/60,28,22,0,bulk_density,801,4,kg/m3,
+NEZERKA2023LCA,4/6 SP4 B,rcf_opc_block,none,none,foamed WCF-OPC block 40/60,,,0,GWP_total_per_t,334,,kg CO2 eq/t,A1-A3 + C1-C4 (EN 15804+A2)
+NEZERKA2023LCA,AAC Sysmic Idro,aac,none,none,Gasbeton EPD S-P-03048,,,0,GWP_total_per_m3,232,,kg CO2 eq/m3,A1-A3

@@ -1,0 +1,409 @@
+# Chemicals, media components and reagents used in the MICP protocols.
+# Units: molar_mass in g/mol; element contents in kg element per kg substance (as purchased form).
+# carbon_origin: fossil | biogenic | geogenic (mineral carbonate) | none
+# background_process: id of the cradle-to-gate background dataset (data/background/background_processes.csv)
+#
+# Element contents are used by the chemistry module for stoichiometric CaCO3 yields, the carbon
+# balance (urea-C is fossil, lactate-C is biogenic, CaCO3-C from limestone is geogenic) and the
+# nitrogen balance (NH3/NH4+ by-products of ureolysis).
+
+urea:
+  name: Urea (technical grade, prills)
+  formula: CO(NH2)2
+  molar_mass: 60.06
+  carbon_content: 0.2000
+  carbon_origin: fossil          # CO2 captured from the ammonia plant and bound in urea (Fertilizers Europe 2018)
+  nitrogen_content: 0.4665
+  background_process: urea_EU
+  notes: "Hydrolysis releases 0.733 kg CO2 per kg urea (IPCC 2019 urea EF 0.20 kg C/kg) unless the carbon is precipitated as CaCO3."
+
+calcium_chloride:
+  name: Calcium chloride (anhydrous, technical grade)
+  formula: CaCl2
+  molar_mass: 110.98
+  calcium_content: 0.3612
+  chloride_content: 0.6388
+  carbon_origin: none
+  background_process: calcium_chloride_industrial
+  notes: "Papers dose 2.8 g/L CaCl2 (assumed anhydrous, 25.2 mmol Ca/L)."
+
+calcium_lactate_pentahydrate:
+  name: Calcium lactate pentahydrate (food grade)
+  formula: Ca(C3H5O3)2.5H2O
+  molar_mass: 308.30
+  calcium_content: 0.1300
+  carbon_content: 0.2338
+  carbon_origin: biogenic        # lactic acid from sugar fermentation
+  background_process: calcium_lactate_pentahydrate
+  notes: "Papers dose 11.0 g/L (35.7 mmol Ca/L). Oxidation: Ca(C3H5O3)2 + 6 O2 -> CaCO3 + 5 CO2 + 5 H2O, i.e. 1/6 of the lactate carbon can be fixed as CaCO3."
+
+sodium_chloride:
+  name: Sodium chloride (saline 9 g/L, LB, NB, TSB component)
+  formula: NaCl
+  molar_mass: 58.44
+  chloride_content: 0.6066
+  carbon_origin: none
+  background_process: sodium_chloride
+
+sodium_bicarbonate:
+  name: Sodium hydrogen carbonate (sesquicarbonate buffer component)
+  formula: NaHCO3
+  molar_mass: 84.01
+  carbon_content: 0.1430
+  carbon_origin: geogenic
+  background_process: sodium_bicarbonate
+
+sodium_carbonate:
+  name: Sodium carbonate, soda ash (sesquicarbonate buffer component)
+  formula: Na2CO3
+  molar_mass: 105.99
+  carbon_content: 0.1133
+  carbon_origin: geogenic
+  background_process: sodium_carbonate
+
+potassium_hydroxide:
+  name: Potassium hydroxide (feather hydrolysis)
+  formula: KOH
+  molar_mass: 56.11
+  carbon_origin: none
+  background_process: potassium_hydroxide
+
+hydrochloric_acid:
+  name: Hydrochloric acid (100 % HCl basis; dosed as 1–2 M solution for pH adjustment)
+  formula: HCl
+  molar_mass: 36.46
+  chloride_content: 0.9723
+  carbon_origin: none
+  background_process: hydrochloric_acid
+
+sodium_hydroxide:
+  name: Sodium hydroxide (100 % basis; ammonia stripping)
+  formula: NaOH
+  molar_mass: 40.00
+  carbon_origin: none
+  background_process: sodium_hydroxide
+
+sulfuric_acid:
+  name: Sulfuric acid (100 % basis; ammonia scrubbing to ammonium sulfate)
+  formula: H2SO4
+  molar_mass: 98.08
+  carbon_origin: none
+  background_process: sulfuric_acid
+
+yeast_extract:
+  name: Yeast extract (powder)
+  carbon_content: 0.45
+  carbon_origin: biogenic
+  nitrogen_content: 0.105
+  background_process: yeast_extract
+
+tryptone:
+  name: Tryptone / casein peptone (pancreatic digest of casein; LB and TSB component)
+  carbon_content: 0.45
+  carbon_origin: biogenic
+  nitrogen_content: 0.13
+  background_process: tryptone_casein
+
+peptone:
+  name: Peptone, generic (animal/plant protein digest; nutrient broth component)
+  carbon_content: 0.45
+  carbon_origin: biogenic
+  nitrogen_content: 0.13
+  background_process: peptone_generic
+
+soytone:
+  name: Soy peptone / soytone (papaic digest of soybean meal; TSB component)
+  carbon_content: 0.45
+  carbon_origin: biogenic
+  nitrogen_content: 0.09
+  background_process: soy_peptone
+
+beef_extract:
+  name: Beef extract / Lab-Lemco powder (nutrient broth component)
+  carbon_content: 0.45
+  carbon_origin: biogenic
+  nitrogen_content: 0.12
+  background_process: beef_extract
+
+glucose:
+  name: D-glucose (dextrose; TSB component)
+  formula: C6H12O6
+  molar_mass: 180.16
+  carbon_content: 0.4000
+  carbon_origin: biogenic
+  background_process: glucose
+
+dipotassium_phosphate:
+  name: Dipotassium hydrogen phosphate (TSB component)
+  formula: K2HPO4
+  molar_mass: 174.18
+  phosphorus_content: 0.1778
+  carbon_origin: none
+  background_process: dipotassium_phosphate
+
+malt_extract:
+  name: Malt extract (malt extract broth for Trichoderma reesei)
+  carbon_content: 0.42
+  carbon_origin: biogenic
+  nitrogen_content: 0.01
+  background_process: malt_extract
+
+mycological_peptone:
+  name: Mycological peptone (malt extract broth component)
+  carbon_content: 0.45
+  carbon_origin: biogenic
+  nitrogen_content: 0.13
+  background_process: peptone_generic
+
+chicken_feathers:
+  name: Raw chicken feathers (slaughterhouse by-product, wet as received)
+  carbon_content: 0.45
+  carbon_origin: biogenic
+  nitrogen_content: 0.15
+  background_process: chicken_feathers_waste
+  notes: "Secondary material: zero burden at the point of collection (EN 15804 polluter-pays); allocation alternatives are scenario parameters."
+
+waste_gypsum_plaster:
+  name: Waste gypsum plaster from recycled plasterboard, ground (CaSO4.2H2O)
+  formula: CaSO4.2H2O
+  molar_mass: 172.17
+  calcium_content: 0.2328
+  carbon_origin: none
+  background_process: waste_gypsum_plaster
+  notes: "Secondary material, zero burden; grinding energy modelled in the protocol (A1)."
+
+magnesium_oxide:
+  name: Magnesium oxide (struvite precipitation)
+  formula: MgO
+  molar_mass: 40.30
+  carbon_origin: none
+  background_process: magnesium_oxide
+
+phosphoric_acid:
+  name: Phosphoric acid (100 % basis; struvite precipitation)
+  formula: H3PO4
+  molar_mass: 97.99
+  phosphorus_content: 0.3161
+  carbon_origin: none
+  background_process: phosphoric_acid
+
+water_tap:
+  name: Tap water (industrial process water)
+  formula: H2O
+  molar_mass: 18.015
+  carbon_origin: none
+  background_process: water_tap
+
+water_deionised:
+  name: Deionised / distilled water (laboratory media and solutions)
+  formula: H2O
+  molar_mass: 18.015
+  carbon_origin: none
+  background_process: water_deionised
+
+# Reference substances used only in stoichiometric calculations
+_reference:
+  CaCO3: {molar_mass: 100.09, carbon_content: 0.1200}
+  CO2: {molar_mass: 44.01}
+  NH3: {molar_mass: 17.03}
+  NH4: {molar_mass: 18.04}
+  N2O: {molar_mass: 44.01}
+  N: {molar_mass: 14.007}
+  C: {molar_mass: 12.011}
+  Ca: {molar_mass: 40.08}
+  Cl: {molar_mass: 35.45}
+  H2O: {molar_mass: 18.015}
+  Ca(OH)2: {molar_mass: 74.09}
+  lactic_acid: {molar_mass: 90.08, carbon_content: 0.4000}
+  ammonium_sulfate: {molar_mass: 132.14, nitrogen_content: 0.2120}
+
+# ---------------------------------------------------------------------------------------------
+# Additional reagents and alternative nutrient sources from the wider MICP literature
+# (Porter et al. 2021; Nežerka et al. 2023 review; van Paassen et al. 2010; Alotaibi et al. 2022)
+
+calcium_acetate:
+  name: Calcium acetate (anhydrous, from petrochemical acetic acid)
+  formula: Ca(CH3COO)2
+  molar_mass: 158.17
+  calcium_content: 0.2534
+  carbon_content: 0.3038
+  carbon_origin: fossil          # switch to 'biogenic' for bio-derived acetic acid (Choi et al. 2017)
+  background_process: calcium_acetate
+  notes: "Organic-acid oxidation route: Ca(CH3COO)2 + 4 O2 -> CaCO3 + 3 CO2 + 3 H2O (1/4 of the carbon fixed)."
+
+calcium_acetate_bio:
+  name: Calcium acetate from bio-derived acetic acid and limestone (Choi et al. 2017 route)
+  formula: Ca(CH3COO)2
+  molar_mass: 158.17
+  calcium_content: 0.2534
+  carbon_content: 0.3038
+  carbon_origin: biogenic
+  background_process: calcium_acetate_bio
+  notes: "Acetic acid from pyrolysis of lignocellulosic biomass reacted with limestone powder."
+
+calcium_nitrate_tetrahydrate:
+  name: Calcium nitrate tetrahydrate (denitrification electron acceptor and Ca source)
+  formula: Ca(NO3)2.4H2O
+  molar_mass: 236.15
+  calcium_content: 0.1697
+  nitrogen_content: 0.1186
+  carbon_origin: none
+  background_process: calcium_nitrate
+
+sodium_nitrate:
+  name: Sodium nitrate (denitrification electron acceptor)
+  formula: NaNO3
+  molar_mass: 84.99
+  nitrogen_content: 0.1648
+  carbon_origin: none
+  background_process: sodium_nitrate
+
+sodium_acetate:
+  name: Sodium acetate (carbon source for denitrifying MICP)
+  formula: CH3COONa
+  molar_mass: 82.03
+  carbon_content: 0.2929
+  carbon_origin: fossil
+  background_process: sodium_acetate
+
+acetic_acid:
+  name: Acetic acid (petrochemical, 100 %)
+  formula: CH3COOH
+  molar_mass: 60.05
+  carbon_content: 0.4000
+  carbon_origin: fossil
+  background_process: acetic_acid
+
+calcium_hydroxide:
+  name: Calcium hydroxide, hydrated lime
+  formula: Ca(OH)2
+  molar_mass: 74.09
+  calcium_content: 0.5410
+  carbon_origin: none
+  background_process: calcium_hydroxide
+
+calcium_carbonate_limestone:
+  name: Ground limestone / calcium carbonate (alternative Ca source after dissolution)
+  formula: CaCO3
+  molar_mass: 100.09
+  calcium_content: 0.4004
+  carbon_content: 0.1200
+  carbon_origin: geogenic
+  background_process: calcium_carbonate_limestone
+
+eggshell_powder:
+  name: Eggshell powder (waste-derived Ca source, ~94 % CaCO3; Choi et al. 2016)
+  formula: CaCO3
+  molar_mass: 100.09
+  calcium_content: 0.376
+  carbon_content: 0.113
+  carbon_origin: geogenic
+  background_process: eggshell_powder_waste
+  notes: "Secondary material (cut-off); grinding energy only."
+
+sucrose:
+  name: Sucrose (table sugar)
+  formula: C12H22O11
+  molar_mass: 342.30
+  carbon_content: 0.4211
+  carbon_origin: biogenic
+  background_process: agb_sugar_white
+
+corn_steep_liquor:
+  name: Corn steep liquor (starch-industry by-product; ~50 % dry matter)
+  carbon_content: 0.22
+  carbon_origin: biogenic
+  nitrogen_content: 0.035
+  background_process: corn_steep_liquor
+  notes: "Low-cost medium for S. pasteurii (Achal et al. 2010; Joshi et al. 2018)."
+
+lactose_mother_liquor:
+  name: Lactose mother liquor (dairy by-product)
+  carbon_content: 0.20
+  carbon_origin: biogenic
+  nitrogen_content: 0.02
+  background_process: lactose_mother_liquor
+  notes: "Alternative medium for S. pasteurii (Achal et al. 2009)."
+
+chicken_manure_effluent:
+  name: Chicken manure biogas-plant effluent (waste-derived medium)
+  carbon_content: 0.02
+  carbon_origin: biogenic
+  nitrogen_content: 0.004
+  background_process: chicken_manure_effluent_waste
+  notes: "Yoosathaporn et al. 2016: cost of medium reduced by 88 %."
+
+non_fat_milk_powder:
+  name: Non-fat (skimmed) milk powder (EICP stabiliser; Almajed et al. 2019)
+  carbon_content: 0.42
+  carbon_origin: biogenic
+  nitrogen_content: 0.057
+  background_process: agb_skimmed_milk_powder
+
+jack_bean_meal:
+  name: Jack bean meal (crude plant urease for EICP)
+  carbon_content: 0.44
+  carbon_origin: biogenic
+  nitrogen_content: 0.045
+  background_process: jack_bean_meal
+
+ammonium_sulfate:
+  name: Ammonium sulfate (nitrogen source in defined media)
+  formula: (NH4)2SO4
+  molar_mass: 132.14
+  nitrogen_content: 0.2120
+  carbon_origin: none
+  background_process: ammonium_sulfate
+
+ammonium_chloride:
+  name: Ammonium chloride
+  formula: NH4Cl
+  molar_mass: 53.49
+  nitrogen_content: 0.2619
+  chloride_content: 0.6627
+  carbon_origin: none
+  background_process: ammonium_chloride
+
+magnesium_sulfate_heptahydrate:
+  name: Magnesium sulfate heptahydrate
+  formula: MgSO4.7H2O
+  molar_mass: 246.47
+  carbon_origin: none
+  background_process: magnesium_sulfate
+
+magnesium_chloride_hexahydrate:
+  name: Magnesium chloride hexahydrate (struvite Mg source)
+  formula: MgCl2.6H2O
+  molar_mass: 203.30
+  chloride_content: 0.3488
+  carbon_origin: none
+  background_process: magnesium_chloride
+
+monopotassium_phosphate:
+  name: Monopotassium phosphate
+  formula: KH2PO4
+  molar_mass: 136.09
+  phosphorus_content: 0.2276
+  carbon_origin: none
+  background_process: dipotassium_phosphate
+
+nickel_chloride:
+  name: Nickel(II) chloride (urease cofactor, trace)
+  formula: NiCl2
+  molar_mass: 129.60
+  chloride_content: 0.5471
+  carbon_origin: none
+  background_process: nickel_chloride
+
+agar:
+  name: Agar (solid media)
+  carbon_content: 0.40
+  carbon_origin: biogenic
+  background_process: agar
+
+food_grade_yeast_extract:
+  name: Food-grade yeast extract (Omoregie et al. 2019 low-cost medium)
+  carbon_content: 0.45
+  carbon_origin: biogenic
+  nitrogen_content: 0.105
+  background_process: yeast_extract

@@ -1,0 +1,77 @@
+# Process-engineering parameters used to translate the laboratory protocols into life-cycle inventories.
+# Two parameter sets are provided:
+#   lab        – energy demand of the actual laboratory equipment (illustrative; dominated by idle losses,
+#                as is typical for lab-scale inventories, see Piccinno et al. 2016 / Tsoy et al. 2020)
+#   industrial – engineering estimates for a small production plant (≈1000 t/a of blocks), following the
+#                scale-up framework of Piccinno et al. (2016): heating with heat recovery, agitation power per
+#                volume (Doran 2013), continuous separation, insulated curing chamber with steady-state heat losses.
+# All values carry an uncertainty range (min/max) used by the Monte Carlo module (uniform or lognormal).
+
+industrial:
+  # --- cultivation of the bacterial suspension -------------------------------------------------
+  medium_sterilisation:
+    method: continuous_steam            # heat exchanger train with heat recovery
+    inlet_C: 15
+    hold_C: 121
+    heat_recovery: {value: 0.60, min: 0.40, max: 0.75}
+    cp_kJ_kgK: 4.18
+    heat_carrier: heat_natural_gas      # background process id
+    electricity_kWh_per_m3: {value: 1.0, min: 0.5, max: 3.0}   # pumps, cooling loop
+  fermentation:
+    power_kW_per_m3: {value: 1.5, min: 0.5, max: 3.0}         # agitation + aeration (Doran 2013, Ch. 8)
+    temperature_control_kWh_per_m3_day: {value: 2.0, min: 0.5, max: 6.0}
+    hydrolysate_heating_heat_recovery: {value: 0.50, min: 0.2, max: 0.7}   # feather hydrolysis at 100 °C
+  harvest:
+    centrifuge_kWh_per_m3: {value: 1.0, min: 0.5, max: 3.0}   # disc-stack separator
+  # --- solids handling and casting -------------------------------------------------------------
+  solids_mixing_kWh_per_t: {value: 2.5, min: 1.0, max: 6.0}   # mixer + vibration/compaction + moulds
+  solution_dosing_kWh_per_m3: {value: 0.3, min: 0.1, max: 1.0}
+  # --- biocementation curing chamber -----------------------------------------------------------
+  curing_chamber:
+    U_W_m2K: {value: 0.35, min: 0.20, max: 1.00}              # insulated panel envelope
+    envelope_area_m2_per_m3_chamber: 3.0
+    chamber_m3_per_t_product: {value: 2.5, min: 1.5, max: 5.0}
+    ambient_C: {value: 15, min: 5, max: 20}
+    heat_carrier: heat_natural_gas
+    initial_heating_cp_kJ_kgK: 1.5                            # wet solids (solids + solutions)
+    air_handling_kWh_per_t_day: {value: 0.15, min: 0.0, max: 0.6}   # fans / humidity control
+  drying:
+    mode: ambient_forced_air            # 'ambient_forced_air' or 'thermal'
+    fan_kWh_per_t: {value: 10.0, min: 0.0, max: 40.0}
+    thermal_specific_MJ_per_kg_water: {value: 2.8, min: 2.5, max: 4.0}   # only for mode = thermal
+    water_evaporated_fraction: {value: 0.85, min: 0.6, max: 1.0}       # of free water in the specimen
+  # --- effluent handling -----------------------------------------------------------------------
+  effluent:
+    fraction_drained: {value: 0.40, min: 0.2, max: 0.7}       # share of added solution volume leaving the specimen
+    basic_treatment_kWh_per_m3: {value: 0.5, min: 0.2, max: 1.5}
+    ammonia_stripping:
+      electricity_kWh_per_kgN: {value: 8.0, min: 4.0, max: 15.0}
+      naoh_kg_per_kgN: {value: 1.5, min: 1.0, max: 3.0}
+      h2so4_kg_per_kgN: {value: 3.5, min: 3.5, max: 4.0}
+      efficiency: {value: 0.90, min: 0.75, max: 0.99}
+    struvite:
+      mgo_kg_per_kgN: {value: 2.9, min: 2.9, max: 4.3}
+      h3po4_kg_per_kgN: {value: 7.0, min: 7.0, max: 8.5}
+      electricity_kWh_per_kgN: {value: 2.0, min: 1.0, max: 5.0}
+      efficiency: {value: 0.75, min: 0.6, max: 0.95}
+  # --- nitrogen fate (ureolytic route) ---------------------------------------------------------
+  nitrogen_fate:
+    urea_hydrolysed_fraction: {value: 0.90, min: 0.7, max: 1.0}
+    nh3_volatilised_fraction_of_retained_N: {value: 0.80, min: 0.5, max: 0.95}   # during drying of the porous block (pH > 9)
+    n2o_fraction_of_N: {value: 0.002, min: 0.0005, max: 0.01}  # IPCC EF1 (1 % of N for soils) as upper bound; contained, drained process assumed lower
+    nitrate_denitrified_fraction: {value: 0.90, min: 0.6, max: 1.0}          # denitrification route: share of nitrate reduced
+    denitrification_n2o_fraction: {value: 0.02, min: 0.005, max: 0.05}       # N2O-N per N denitrified (incomplete denitrification)
+  # --- lactate fate (organic-acid route) -------------------------------------------------------
+  lactate_fate:
+    oxidised_fraction: {value: 0.90, min: 0.6, max: 1.0}       # remainder leaves with the effluent (COD)
+  # --- water ------------------------------------------------------------------------------------
+  water_source: water_tap
+
+lab:
+  autoclave: {power_kW: 2.2, cycle_h: 1.0, load_L: 10.0}
+  shaking_incubator: {average_power_kW: 0.15, capacity_L: 2.0}
+  centrifuge: {power_kW: 1.2, run_h: 0.1667, capacity_L: 1.0}
+  incubator: {average_power_kW: 0.08, capacity_specimens: 100}   # 100 L chamber at 28–30 °C in a 22 °C room
+  hotplate_hydrolysis: {power_kW: 1.0, batch_L: 1.0, duration_h: 0.5}
+  water_source: water_deionised
+  consumables_note: "Single-use plastics, filters, gloves and analytics are excluded (not part of the technology)."

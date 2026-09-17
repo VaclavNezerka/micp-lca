@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this database or code, please cite it together with the underlying experimental papers (see data/sources/sources.csv)."
+title: "micp-lca: database and toolkit for the ex-ante life-cycle assessment of MICP-based recycling of waste concrete fines"
+version: 0.1.0
+date-released: "2026-09-17"
+type: software
+authors:
+  - name: "MICP research group, Faculty of Civil Engineering, Czech Technical University in Prague, and Department of Biochemistry and Microbiology, University of Chemistry and Technology Prague"
+keywords:
+  - life cycle assessment
+  - MICP
+  - biocementation
+  - waste concrete fines
+  - EN 15804
+  - Environmental Footprint 3.1
+license: MIT
+repository-code: "https://github.com/<organisation>/micp-lca"
+references:
+  - type: article
+    title: "On the possibility of using bacteria for recycling finest fractions of concrete waste: a critical review"
+    authors: [{family-names: Nežerka, given-names: V.}, {family-names: Holeček, given-names: P.}, {family-names: Somr, given-names: M.}, {family-names: Tichá, given-names: P.}, {family-names: Domonkos, given-names: M.}, {family-names: Stiborová, given-names: H.}]
+    journal: "Reviews in Environmental Science and Bio/Technology"
+    year: 2023
+    doi: 10.1007/s11157-023-09654-3
+  - type: article
+    title: "Recycling of fines from waste concrete: development of lightweight masonry blocks and assessment of their environmental benefits"
+    authors: [{family-names: Nežerka, given-names: V.}, {family-names: Prošek, given-names: Z.}, {family-names: Trejbal, given-names: J.}, {family-names: Pešta, given-names: J.}, {family-names: Ferriz-Papi, given-names: J. A.}, {family-names: Tesárek, given-names: P.}]
+    journal: "Journal of Cleaner Production"
+    volume: 385
+    year: 2023
+    doi: 10.1016/j.jclepro.2022.135711

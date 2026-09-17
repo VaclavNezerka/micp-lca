@@ -1,0 +1,28 @@
+source_id,study,system,functional_unit,indicator,value,unit,pathway_or_variant,scope,notes
+PORTER2021,Porter et al. 2021,"MICP CaCO3, ureolysis, lab-grade chemicals",1 kg CaCO3,GWP,2.06,kg CO2 eq,urea hydrolysis,cradle-to-gate (materials only; no fermenter energy/transport),"SimaPro 8, ecoinvent v2.2, AUSLCI"
+PORTER2021,Porter et al. 2021,"MICP CaCO3, ureolysis, commercial-grade chemicals",1 kg CaCO3,GWP,1.51,kg CO2 eq,urea hydrolysis,cradle-to-gate (materials only),
+PORTER2021,Porter et al. 2021,"MICP CaCO3, carbonic anhydrase, lab-grade",1 kg CaCO3,GWP,0.671,kg CO2 eq,carbonic anhydrase,cradle-to-gate (materials only),lowest of six pathways
+PORTER2021,Porter et al. 2021,"MICP CaCO3, carbonic anhydrase, commercial-grade",1 kg CaCO3,GWP,0.56,kg CO2 eq,carbonic anhydrase,cradle-to-gate (materials only),
+PORTER2021,Porter et al. 2021,"MICP CaCO3, sulfate reduction, lab / commercial",1 kg CaCO3,GWP,1.38,kg CO2 eq,sulfate reduction,cradle-to-gate,commercial 0.82
+PORTER2021,Porter et al. 2021,"MICP CaCO3, ammonification, lab / commercial",1 kg CaCO3,GWP,2.34,kg CO2 eq,ammonification,cradle-to-gate,commercial 1.54
+PORTER2021,Porter et al. 2021,"MICP CaCO3, nitrate reduction, lab / commercial",1 kg CaCO3,GWP,3.91,kg CO2 eq,denitrification,cradle-to-gate,commercial 1.97
+PORTER2021,Porter et al. 2021,"MICP CaCO3, methane oxidation, lab / commercial",1 kg CaCO3,GWP,1.15,kg CO2 eq,methane oxidation,cradle-to-gate,commercial 0.59
+PORTER2021,Porter et al. 2021,"MICP CaCO3, ureolysis, lab-grade",1 kg CaCO3,eutrophication,0.24,kg SO4 eq (AUSLCI),urea hydrolysis,cradle-to-gate,ammonium waste
+PORTER2021,Porter et al. 2021,"MICP CaCO3, ureolysis, lab-grade",1 kg CaCO3,embodied energy (CED),28.4,MJ,urea hydrolysis,cradle-to-gate,commercial 16.1
+PORTER2021,Porter et al. 2021,"MICP CaCO3, carbonic anhydrase, lab / commercial",1 kg CaCO3,embodied energy (CED),12.9,MJ,carbonic anhydrase,cradle-to-gate,commercial 0.62
+PORTER2021,Porter et al. 2021,"Calcium carbonate, traditional carbonation process (reference)",1 kg CaCO3,GWP,2.24,kg CO2 eq,reference,cradle-to-gate,derived: CA route is 70 % lower (0.681) -> ~2.27
+DENG2021,Deng et al. 2021,"MICP CaCO3, ureolysis (China, coal-based chemicals, incl. fermenter)",1 t CaCO3,GWP,3399.5,kg CO2,urea hydrolysis,cradle-to-gate incl. cultivation energy,"80.4 % raw materials, 19.6 % cultivation"
+DENG2021,Deng et al. 2021,"MICP CaCO3, ureolysis (China)",1 t CaCO3,energy,1847.3,kgce,urea hydrolysis,cradle-to-gate,1.85 t standard coal
+DENG2021,Deng et al. 2021,Urea production (China),1 t urea,GWP,420,kg CO2,reagent,cradle-to-gate,0.42 t CO2/t
+DENG2021,Deng et al. 2021,"Calcium chloride production (China, HCl + limestone)",1 t CaCl2,GWP,2790,kg CO2,reagent,cradle-to-gate,2.79 t CO2/t
+DENG2021,Deng et al. 2021,"Bacterial culture, 1000 L fermenter",1 m3 bacterial solution,GWP,668,kg CO2,cultivation,gate-to-gate,585 kWh electricity at 317 g CO2/MJ
+ALOTAIBI2022,Alotaibi et al. 2022,"EICP vs Portland cement soil stabilisation (10 000 m2 road subgrade, 1.5 MPa)",functional unit (relative),GWP,0.97,ratio EICP/PC,EICP,cradle-to-site,"EICP 3 % lower GWP, 90 % lower ADP, higher AP/EP"
+NEZERKA2023LCA,Nezerka et al. 2023,WCF-OPC foamed lightweight block 40/60,1 t block,GWP,334,kg CO2 eq,WCF-OPC block,A1-A3 + C1-C4 (EN 15804+A2),81 % from CEM I
+NEZERKA2023LCA,Nezerka et al. 2023,"AAC block Sysmic Idro (Gasbeton EPD S-P-03048), 580 kg/m3",1 m3,GWP,232,kg CO2 eq,AAC,A1-A3,EPD
+NEZERKA2023LCA,Nezerka et al. 2023,WCF-OPC foamed block,1 m3,GWP,249,kg CO2 eq,WCF-OPC block,A1-A3,
+NEZERKA2023REV,Nezerka et al. 2023 (review),Embodied energy OPC / urea / CaCl2,1 kg,embodied energy,6.21,MJ,reference,cradle-to-gate,"urea 30.54, CaCl2 11.76 MJ/kg"
+VANPAASSEN2010,van Paassen et al. 2010,Biogrout field experiment: reagent demand,1 kg CaCO3,reagents,0.6,kg urea,urea hydrolysis,stoichiometric,+ 1.1 kg CaCl2 per kg CaCO3
+RAYMOND2025,Raymond et al. 2025,"MICP soil improvement (augmented vs stimulated), NH4+ rinsing",3.7 m soil column,qualitative,,,urea hydrolysis (biostimulated),LCSA,stimulation and lower ureolytic rates reduce impacts
+YOOSATHAPORN2016,Yoosathaporn et al. 2016,Cultivation medium cost: commercial vs chicken manure effluent,1 L medium,cost,0.71,USD,medium,,−88.9 % vs commercial medium (6.4 USD/L)
+OTTOVA2026,Ottova et al. 2026,Feather hydrolysate vs LB/TSB medium cost,1 L medium,cost ratio,0.2,ratio,medium,,ingredients of hydrolysate ~1/5 of LB/TSB; thermal treatment comparable
+OMOREGIE2019,Omoregie et al. 2019,Share of media in MICP cost,,cost share,0.6,fraction,medium,,laboratory-grade media up to 60 % of the cost of MICP for recycled aggregate

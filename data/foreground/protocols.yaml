@@ -1,0 +1,525 @@
+# Laboratory biocementation protocols reproduced from the papers (one specimen = the unit described).
+# The foreground model scales every quantity to 1 kg of dry input solids and then to the functional unit.
+#
+# Keys
+#   solids_g            dry solids per specimen (waste fines + additives)
+#   gypsum_fraction     mass fraction of waste gypsum plaster in the solids
+#   suspension          bacterial suspension in saline: volume_mL and od600
+#   saline_mL           additional sterile saline (9 g/L NaCl)
+#   hcl                 acid for pH adjustment: molarity (mol/L) and volume_mL (100 % HCl mass derived)
+#   biocementation_solution (BS): base_medium (media.yaml id), supplements in g/L, dose_mL, dosing scheme
+#       dosing: {mode: repeated, interval_h, duration_d}  -> n_doses = floor(duration_d*24/interval_h)
+#               {mode: single}                            -> 1 dose at preparation
+#               {mode: fixed, n_doses}                    -> explicit number
+#   incubation          temperature_C and duration_d (biocementation period, wet)
+#   drying              temperature_C and duration_d (conditioning/drying period)
+#   results             measured properties of the consolidated specimen (null if not reported):
+#       fc_MPa (uniaxial compressive strength), k_N_mm (indentation stiffness),
+#       caco3_gain_wt_abs (absolute increase of CaCO3 in wt% vs sterile control), porosity_pct
+#   precipitation_efficiency  fraction of the limiting reagent converted to CaCO3 (default 1.0);
+#       when caco3_gain_wt_abs is given the measured value is used instead (measured_priority: true)
+#   fibres_g            poultry feather fibres (dry mass) per specimen, if any
+
+# ---------------------------------------------------------------- Sporosarcina pasteurii (ureolytic)
+sp_wcf_14d:
+  name: S. pasteurii DSM 33 on WCF, 14 d biocementation (HOLECEK2024 G-B-14 / H-B-14)
+  source_id: HOLECEK2024
+  strain: sporosarcina_pasteurii_DSM33
+  material: wcf_h
+  solids_g: 7.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 10.0
+  hcl: {molarity: 1.0, volume_mL: 0.7}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {urea: 20.0, calcium_chloride: 2.8}
+    dose_mL: 10.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 14}
+  incubation: {temperature_C: 28, duration_d: 14}
+  drying: {temperature_C: 28, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: 5.01, caco3_gain_wt_abs: 1.6, porosity_pct: 61.8}
+  precipitation_efficiency: 1.0
+
+sp_wcf_30d:
+  name: S. pasteurii DSM 33 on WCF, 30 d biocementation (HOLECEK2024 H-B-30)
+  source_id: HOLECEK2024
+  strain: sporosarcina_pasteurii_DSM33
+  material: wcf_h
+  solids_g: 7.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 10.0
+  hcl: {molarity: 1.0, volume_mL: 0.7}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {urea: 20.0, calcium_chloride: 2.8}
+    dose_mL: 10.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 28, duration_d: 30}
+  drying: {temperature_C: 28, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: 5.95, caco3_gain_wt_abs: 3.9, porosity_pct: 57.2}
+  precipitation_efficiency: 1.0
+
+sp_wcf_90d:
+  name: S. pasteurii DSM 33 on WCF, 90 d biocementation (HOLECEK2024 H-B-90; G-B-90 via material override)
+  source_id: HOLECEK2024
+  strain: sporosarcina_pasteurii_DSM33
+  material: wcf_h
+  solids_g: 7.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 10.0
+  hcl: {molarity: 1.0, volume_mL: 0.7}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {urea: 20.0, calcium_chloride: 2.8}
+    dose_mL: 10.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 90}
+  incubation: {temperature_C: 28, duration_d: 90}
+  drying: {temperature_C: 28, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: 7.48, caco3_gain_wt_abs: 8.96, porosity_pct: 50.9}
+  results_by_material:
+    wcf_g: {k_N_mm: 11.99, caco3_gain_wt_abs: 11.05, porosity_pct: 61.0}
+  precipitation_efficiency: 1.0
+
+sp_wcf_30d_ccc:
+  name: S. pasteurii DSM 33, 10 g WCF, 30 d (KLIKOVA2025CCC stage 2, G-SP/H-SP/C-SP)
+  source_id: KLIKOVA2025CCC
+  strain: sporosarcina_pasteurii_DSM33
+  material: wcf_c
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 10.0
+  hcl: {molarity: 2.0, volume_mL: 1.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {urea: 20.0, calcium_chloride: 2.8}
+    dose_mL: 10.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 28, duration_d: 30}
+  drying: {temperature_C: 28, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: null, caco3_gain_wt_abs: 3.0, porosity_pct: null}
+  precipitation_efficiency: 1.0
+
+sp_jctb_commercial:
+  name: S. pasteurii DSM 33, commercial media (TSB cultivation, NB biocementation), 28 d (OTTOVA2026 Med-C-SP / Med-H-SP)
+  source_id: OTTOVA2026
+  strain: sporosarcina_pasteurii_DSM33
+  material: wcf_c
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 1.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {urea: 20.0, calcium_chloride: 2.8}
+    dose_mL: 10.0
+    dosing: {mode: fixed, n_doses: 14}
+  incubation: {temperature_C: 28, duration_d: 28}
+  drying: {temperature_C: 28, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: 4.0, caco3_gain_wt_abs: 4.25, porosity_pct: null}
+  results_by_material:
+    wcf_h: {k_N_mm: 6.5, caco3_gain_wt_abs: 7.38}
+  precipitation_efficiency: 1.0
+
+sp_jctb_feather:
+  name: S. pasteurii DSM 33, feather hydrolysate media (cultivation + biocementation), 28 d (OTTOVA2026 Feath-C-SP / Feath-H-SP)
+  source_id: OTTOVA2026
+  strain: sporosarcina_pasteurii_DSM33
+  cultivation_variant: feather
+  material: wcf_c
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 1.0}
+  biocementation_solution:
+    base_medium: feather_hydrolysate_bs_sp
+    supplements: {urea: 20.0, calcium_chloride: 2.8}
+    dose_mL: 10.0
+    dosing: {mode: fixed, n_doses: 14}
+  incubation: {temperature_C: 28, duration_d: 28}
+  drying: {temperature_C: 28, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: 5.5, caco3_gain_wt_abs: 6.70, porosity_pct: null}
+  results_by_material:
+    wcf_h: {k_N_mm: 6.0, caco3_gain_wt_abs: 6.00}
+  precipitation_efficiency: 1.0
+
+# ---------------------------------------------------------------- non-ureolytic Bacillus (organic acid oxidation)
+bc_wcf_30d_ccc:
+  name: S. cohnii DSM 6307 (or A. pseudofirmus), 10 g WCF, Ca-lactate BS, 30 d (KLIKOVA2025CCC stage 3, C-BC)
+  source_id: KLIKOVA2025CCC
+  strain: sutcliffiella_cohnii_DSM6307
+  material: wcf_c
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 10.0
+  hcl: {molarity: 2.0, volume_mL: 1.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 10.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  results: {fc_MPa: 0.45, k_N_mm: null, caco3_gain_wt_abs: 2.0, porosity_pct: null}
+  precipitation_efficiency: 1.0
+  notes: "C-BC compressive strength ≈25 % of adobe bricks (KLIKOVA2025CCC); 0.45 MPa is an estimate consistent with the preprint C-30 value (1.02 MPa, vibrated cylinders)."
+
+bc_jctb_commercial:
+  name: S. cohnii DSM 6307, commercial media, 28 d (OTTOVA2026 Med-C-SC / Med-H-SC)
+  source_id: OTTOVA2026
+  strain: sutcliffiella_cohnii_DSM6307
+  material: wcf_c
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 1.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 10.0
+    dosing: {mode: fixed, n_doses: 14}
+  incubation: {temperature_C: 30, duration_d: 28}
+  drying: {temperature_C: 30, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: 5.1, caco3_gain_wt_abs: 1.99, porosity_pct: null}
+  results_by_material:
+    wcf_h: {k_N_mm: 16.1, caco3_gain_wt_abs: 4.25}
+  precipitation_efficiency: 1.0
+
+bc_jctb_feather:
+  name: S. cohnii DSM 6307, feather hydrolysate media, 28 d (OTTOVA2026 Feath-C-SC)
+  source_id: OTTOVA2026
+  strain: sutcliffiella_cohnii_DSM6307
+  cultivation_variant: feather
+  material: wcf_c
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 1.0}
+  biocementation_solution:
+    base_medium: feather_hydrolysate_bs_sc
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 10.0
+    dosing: {mode: fixed, n_doses: 14}
+  incubation: {temperature_C: 30, duration_d: 28}
+  drying: {temperature_C: 30, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: 7.5, caco3_gain_wt_abs: 6.27, porosity_pct: null}
+  precipitation_efficiency: 1.0
+
+# ---------------------------------------------------------------- gypsum-promoted, single/repeated dose (preprint 2026)
+pre_c_g_30_0:
+  name: S. cohnii, WCF-C + 10 % waste gypsum, single nutrient dose, 30 °C (NEZERKA2026PRE C-G-30-0; prototype recipe)
+  source_id: NEZERKA2026PRE
+  strain: sutcliffiella_cohnii_DSM6307
+  material: wcf_c
+  solids_g: 26.4
+  gypsum_fraction: 0.0909
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 2.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 5.0
+    dosing: {mode: single}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  mixing: {vibration_s: 45}
+  specimen: {shape: cylinder, diameter_mm: 25, height_mm: 50}
+  results: {fc_MPa: 1.90, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  results_note: "fc for C-G-30-0 shown only graphically; ≈1.9 MPa (cf. C-G-30 1.88±0.36, N-C-G-30-0 1.92±0.08)."
+  precipitation_efficiency: 1.0
+  aft_water_binding_fraction: 0.03
+
+pre_c_g_30:
+  name: S. cohnii, WCF-C + 10 % waste gypsum, repeated nutrient dosing 30 d, 30 °C (NEZERKA2026PRE C-G-30)
+  source_id: NEZERKA2026PRE
+  strain: sutcliffiella_cohnii_DSM6307
+  material: wcf_c
+  solids_g: 26.4
+  gypsum_fraction: 0.0909
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 2.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 5.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  mixing: {vibration_s: 45}
+  specimen: {shape: cylinder, diameter_mm: 25, height_mm: 50}
+  results: {fc_MPa: 1.88, fc_sd_MPa: 0.36, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  precipitation_efficiency: 1.0
+  aft_water_binding_fraction: 0.03
+
+pre_c_30:
+  name: S. cohnii, WCF-C without gypsum, repeated dosing 30 d, 30 °C (NEZERKA2026PRE C-30)
+  source_id: NEZERKA2026PRE
+  strain: sutcliffiella_cohnii_DSM6307
+  material: wcf_c
+  solids_g: 26.4
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 2.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 5.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  mixing: {vibration_s: 45}
+  specimen: {shape: cylinder, diameter_mm: 25, height_mm: 50}
+  results: {fc_MPa: 1.02, fc_sd_MPa: 0.22, k_N_mm: null, caco3_gain_wt_abs: 5.0, porosity_pct: null}
+  results_by_temperature:
+    20: {fc_MPa: 0.51, fc_sd_MPa: 0.03}
+  precipitation_efficiency: 1.0
+
+pre_h1_g_30_0:
+  name: S. cohnii, HM1 (concrete+AAC) + 10 % waste gypsum, single dose, 30 °C (NEZERKA2026PRE H1-G-30-0; prototype)
+  source_id: NEZERKA2026PRE
+  strain: sutcliffiella_cohnii_DSM6307
+  material: hm1
+  solids_g: 26.4
+  gypsum_fraction: 0.0909
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 6.0
+  hcl: {molarity: 2.0, volume_mL: 0.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 5.0
+    dosing: {mode: single}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  mixing: {vibration_s: 45}
+  specimen: {shape: cylinder, diameter_mm: 25, height_mm: 50}
+  results: {fc_MPa: 0.54, fc_sd_MPa: 0.03, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  results_prototype: {fc_MPa: 0.40, fc_sd_MPa: 0.10, note: "30 mm cubes cut from 110x70x30 mm prototype"}
+  precipitation_efficiency: 1.0
+  aft_water_binding_fraction: 0.03
+
+pre_h1_g_30:
+  name: S. cohnii, HM1 + 10 % waste gypsum, repeated dosing 30 d, 30 °C (NEZERKA2026PRE H1-G-30)
+  source_id: NEZERKA2026PRE
+  strain: sutcliffiella_cohnii_DSM6307
+  material: hm1
+  solids_g: 26.4
+  gypsum_fraction: 0.0909
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 6.0
+  hcl: {molarity: 2.0, volume_mL: 0.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 5.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  mixing: {vibration_s: 45}
+  specimen: {shape: cylinder, diameter_mm: 25, height_mm: 50}
+  results: {fc_MPa: 0.39, fc_sd_MPa: 0.07, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  precipitation_efficiency: 1.0
+  aft_water_binding_fraction: 0.03
+
+pre_h2_g_30_0:
+  name: S. cohnii, HM2 (mortar+brick) + 10 % waste gypsum, single dose, 30 °C (NEZERKA2026PRE H2-G-30-0)
+  source_id: NEZERKA2026PRE
+  strain: sutcliffiella_cohnii_DSM6307
+  material: hm2
+  solids_g: 26.4
+  gypsum_fraction: 0.0909
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 6.0
+  hcl: {molarity: 2.0, volume_mL: 0.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 5.0
+    dosing: {mode: single}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  mixing: {vibration_s: 45}
+  specimen: {shape: cylinder, diameter_mm: 25, height_mm: 50}
+  results: {fc_MPa: 0.70, fc_sd_MPa: 0.03, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  precipitation_efficiency: 1.0
+  aft_water_binding_fraction: 0.03
+
+pre_h2_g_30:
+  name: S. cohnii, HM2 + 10 % waste gypsum, repeated dosing 30 d, 30 °C (NEZERKA2026PRE H2-G-30)
+  source_id: NEZERKA2026PRE
+  strain: sutcliffiella_cohnii_DSM6307
+  material: hm2
+  solids_g: 26.4
+  gypsum_fraction: 0.0909
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 6.0
+  hcl: {molarity: 2.0, volume_mL: 0.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 5.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  mixing: {vibration_s: 45}
+  specimen: {shape: cylinder, diameter_mm: 25, height_mm: 50}
+  results: {fc_MPa: 0.15, fc_sd_MPa: 0.03, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  precipitation_efficiency: 1.0
+  aft_water_binding_fraction: 0.03
+
+# ---------------------------------------------------------------- fungal (Trichoderma reesei)
+tr_wcfh_cacl2:
+  name: T. reesei DSM 768 on WCF-H, CaCl2 route, 21 d + 21 d drying (KLIKOVA2025JECE TR-C)
+  source_id: KLIKOVA2025JECE
+  strain: trichoderma_reesei_DSM768
+  material: wcf_h
+  solids_g: 25.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 0.0, od600: null}
+  inoculum_agar_L: 0.01
+  saline_mL: 30.0
+  hcl: {molarity: 2.0, volume_mL: 0.0}
+  biocementation_solution:
+    base_medium: meb_20
+    supplements: {calcium_chloride: 2.8}
+    dose_mL: 15.0
+    dosing: {mode: fixed, n_doses: 7}      # initial 30 mL (= 2 doses) + 5 refreshes of 15 mL every 3–5 d over 21 d
+  incubation: {temperature_C: 28, duration_d: 21}
+  drying: {temperature_C: 28, duration_d: 21}
+  results: {fc_MPa: null, k_N_mm: null, caco3_gain_wt_abs: 5.0, porosity_pct: null}
+  precipitation_efficiency: 1.0
+  carbonate_carbon_source: metabolic_biogenic   # CO2 from malt-extract metabolism (biogenic)
+
+tr_wcfh_cal2:
+  name: T. reesei DSM 768 on WCF-H, Ca-lactate route, 21 d + 21 d drying (KLIKOVA2025JECE TR-L)
+  source_id: KLIKOVA2025JECE
+  strain: trichoderma_reesei_DSM768
+  material: wcf_h
+  solids_g: 25.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 0.0, od600: null}
+  inoculum_agar_L: 0.01
+  saline_mL: 30.0
+  hcl: {molarity: 2.0, volume_mL: 0.0}
+  biocementation_solution:
+    base_medium: meb_20
+    supplements: {calcium_lactate_pentahydrate: 11.0}
+    dose_mL: 15.0
+    dosing: {mode: fixed, n_doses: 7}
+  incubation: {temperature_C: 28, duration_d: 21}
+  drying: {temperature_C: 28, duration_d: 21}
+  results: {fc_MPa: null, k_N_mm: null, caco3_gain_wt_abs: 5.5, porosity_pct: null}
+  precipitation_efficiency: 1.0
+
+# ---------------------------------------------------------------- literature pathways (not tested by the group; for comparison)
+lit_sp_altmedia_30d:
+  name: S. pasteurii on low-cost media (NH4-YE default; CSL / LML / manure effluent / food-grade YE variants), stoichiometric urea, 30 d
+  source_id: NEZERKA2023REV
+  strain: sporosarcina_pasteurii_altmedia
+  material: wcf_h
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 1.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {urea: 20.0, calcium_chloride: 30.0}
+    dose_mL: 10.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  precipitation_efficiency: 0.8
+  notes: "Equimolar-ish reagents (urea 0.33 M, CaCl2 0.27 M) as in soil biocementation practice; efficiency 0.8 assumed."
+
+lit_eicp_30d:
+  name: EICP (jack bean meal 0.9 g/L + non-fat milk 4 g/L, urea 1 M, CaCl2 0.67 M; Almajed-type solution), 3 doses
+  source_id: ALOTAIBI2022
+  strain: eicp_jack_bean_urease
+  material: wcf_h
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 0.0, od600: null}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 0.0}
+  biocementation_solution:
+    base_medium: saline
+    supplements: {urea: 60.0, calcium_chloride: 74.0, jack_bean_meal: 0.9, non_fat_milk_powder: 4.0}
+    dose_mL: 3.0
+    dosing: {mode: fixed, n_doses: 3}
+  incubation: {temperature_C: 20, duration_d: 14}
+  drying: {temperature_C: 20, duration_d: 14}
+  results: {fc_MPa: null, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  precipitation_efficiency: 0.8
+
+lit_denitrification_30d:
+  name: Denitrifying biocementation (calcium acetate 0.1 M + calcium nitrate 0.16 M per dose; van Paassen 2010 stoichiometry), 30 d
+  source_id: VANPAASSEN2010
+  strain: pseudomonas_denitrificans
+  material: wcf_h
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 1.0}
+  biocementation_solution:
+    base_medium: saline
+    supplements: {calcium_acetate: 15.8, calcium_nitrate_tetrahydrate: 37.8}
+    dose_mL: 10.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  precipitation_efficiency: 0.7
+
+lit_acetate_oxidation_30d:
+  name: Non-ureolytic Bacillus on calcium acetate (11 g/L, NB 4 g/L), 30 d repeated dosing
+  source_id: PORTER2021
+  strain: bacillus_acetate_oxidiser
+  material: wcf_c
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 5.0}
+  saline_mL: 10.0
+  hcl: {molarity: 2.0, volume_mL: 1.0}
+  biocementation_solution:
+    base_medium: nb_4
+    supplements: {calcium_acetate: 11.0}
+    dose_mL: 10.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 30, duration_d: 30}
+  drying: {temperature_C: 30, duration_d: 30}
+  results: {fc_MPa: null, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  precipitation_efficiency: 0.5
+
+lit_photosynthetic_30d:
+  name: Cyanobacterial MICP (bicarbonate 4 g/L + CaCl2 2.8 g/L, light 0.03 kWh/L/d), 30 d
+  source_id: PORTER2021
+  strain: synechococcus_cyanobacteria
+  material: wcf_h
+  solids_g: 10.0
+  gypsum_fraction: 0.0
+  suspension: {volume_mL: 10.0, od600: 2.0}
+  saline_mL: 0.0
+  hcl: {molarity: 2.0, volume_mL: 1.0}
+  biocementation_solution:
+    base_medium: bg11_cyanobacteria
+    supplements: {sodium_bicarbonate: 4.0, calcium_chloride: 2.8}
+    dose_mL: 10.0
+    dosing: {mode: repeated, interval_h: 60, duration_d: 30}
+  incubation: {temperature_C: 28, duration_d: 30}
+  drying: {temperature_C: 28, duration_d: 14}
+  results: {fc_MPa: null, k_N_mm: null, caco3_gain_wt_abs: null, porosity_pct: null}
+  precipitation_efficiency: 0.5

@@ -1,0 +1,140 @@
+# Culture media and solutions used in the papers. Component amounts in g per litre of final medium.
+# Compositions of commercial dehydrated media follow the manufacturers' formulations (Oxoid / HiMedia):
+#   TSB (tryptone soya broth, 30 g/L): tryptone 17, soytone 3, glucose 2.5, NaCl 5, K2HPO4 2.5
+#   LB (Luria–Bertani, Miller, 25 g/L): tryptone 10, yeast extract 5, NaCl 10
+#   LB 12 g/L variant (KLIKOVA2025JECE): same proportions scaled to 12 g/L
+#   NB (nutrient broth, Oxoid CM0001, 13 g/L): Lab-Lemco 1, yeast extract 2, peptone 5, NaCl 5
+#   Papers use NB at 4 g/L (0.3077 x standard) as the base of the biocementation solution.
+#   MEB (malt extract broth, Oxoid CM0057, 20 g/L): malt extract 17, mycological peptone 3
+# water_kg_per_L: water demand (kg) per litre of medium (deionised in the lab, tap at industrial scale)
+
+tsb_30:
+  name: Tryptone soya broth, 30 g/L (S. pasteurii cultivation)
+  source_id: HOLECEK2024
+  components: {tryptone: 17.0, soytone: 3.0, glucose: 2.5, sodium_chloride: 5.0, dipotassium_phosphate: 2.5}
+  sterilisation: autoclave
+
+lb_25:
+  name: Luria–Bertani broth (Miller), 25 g/L (S. cohnii / A. pseudofirmus cultivation)
+  source_id: NEZERKA2026PRE
+  components: {tryptone: 10.0, yeast_extract: 5.0, sodium_chloride: 10.0}
+  sterilisation: autoclave
+
+lb_12:
+  name: Luria–Bertani broth, 12 g/L (S. cohnii control in fungal study)
+  source_id: KLIKOVA2025JECE
+  components: {tryptone: 4.8, yeast_extract: 2.4, sodium_chloride: 4.8}
+  sterilisation: autoclave
+
+sesquicarbonate_buffer_100ml:
+  name: Sodium sesquicarbonate buffer dosed at 100 mL/L (42 g/L NaHCO3 + 53 g/L Na2CO3 stock)
+  source_id: KLIKOVA2025CCC
+  components: {sodium_bicarbonate: 4.2, sodium_carbonate: 5.3}
+  sterilisation: filtration
+  notes: Final concentration in the cultivation medium; pH 9.5–9.7.
+
+nb_4:
+  name: Nutrient broth, 4 g/L (base of the biocementation solution)
+  source_id: HOLECEK2024
+  components: {beef_extract: 0.3077, yeast_extract: 0.6154, peptone: 1.5385, sodium_chloride: 1.5385}
+  sterilisation: autoclave
+
+nb_13:
+  name: Nutrient broth, 13 g/L (standard strength, sensitivity)
+  source_id: HOLECEK2024
+  components: {beef_extract: 1.0, yeast_extract: 2.0, peptone: 5.0, sodium_chloride: 5.0}
+  sterilisation: autoclave
+
+meb_20:
+  name: Malt extract broth, 20 g/L (T. reesei biocementation solution)
+  source_id: KLIKOVA2025JECE
+  components: {malt_extract: 17.0, mycological_peptone: 3.0}
+  sterilisation: autoclave
+
+saline:
+  name: Physiological saline, 9 g/L NaCl
+  source_id: HOLECEK2024
+  components: {sodium_chloride: 9.0}
+  sterilisation: autoclave
+
+feather_hydrolysate_sp:
+  name: Optimised feather hydrolysate for S. pasteurii (KOH 8 g/L, feathers 15 g/L, 100 °C 0.25 h, YE 2 g/L, neutralised with HCl)
+  source_id: OTTOVA2026
+  components: {chicken_feathers: 15.0, potassium_hydroxide: 8.0, yeast_extract: 2.0, hydrochloric_acid: 5.2}
+  sterilisation: none          # hydrolysis at 100 °C sterilises; centrifuged/filtered afterwards
+  hydrolysis: {temperature_C: 100, duration_h: 0.25}
+  notes: HCl 5.2 g/L = stoichiometric neutralisation of 8 g/L KOH (0.143 mol/L) to pH 7.4.
+
+feather_hydrolysate_sc:
+  name: Optimised feather hydrolysate for S. cohnii (as above with YE 3 g/L)
+  source_id: OTTOVA2026
+  components: {chicken_feathers: 15.0, potassium_hydroxide: 8.0, yeast_extract: 3.0, hydrochloric_acid: 5.2}
+  sterilisation: none
+  hydrolysis: {temperature_C: 100, duration_h: 0.25}
+
+feather_hydrolysate_bs_sp:
+  name: Feather hydrolysate diluted 7x as biocementation-solution base (S. pasteurii)
+  source_id: OTTOVA2026
+  components: {chicken_feathers: 2.1429, potassium_hydroxide: 1.1429, yeast_extract: 0.2857, hydrochloric_acid: 0.7429}
+  sterilisation: none
+  hydrolysis: {temperature_C: 100, duration_h: 0.25, fraction_of_volume_heated: 0.142857}
+
+feather_hydrolysate_bs_sc:
+  name: Feather hydrolysate diluted 7x as biocementation-solution base (S. cohnii)
+  source_id: OTTOVA2026
+  components: {chicken_feathers: 2.1429, potassium_hydroxide: 1.1429, yeast_extract: 0.4286, hydrochloric_acid: 0.7429}
+  sterilisation: none
+  hydrolysis: {temperature_C: 100, duration_h: 0.25, fraction_of_volume_heated: 0.142857}
+
+# ---------------------------------------------------------------------------------------------
+# Alternative and literature media (for scenario building beyond the group's own protocols)
+
+nh4_ye_20:
+  name: NH4-YE medium (yeast extract 20 g/L, ammonium sulfate 10 g/L, NiCl2 10 uM; ATCC 1376-type, Deng et al. 2021)
+  source_id: DENG2021
+  components: {yeast_extract: 20.0, ammonium_sulfate: 10.0, nickel_chloride: 0.0013}
+  sterilisation: autoclave
+
+csl_15:
+  name: Corn steep liquor medium, 15 g/L dry matter equivalent (Achal et al. 2010)
+  source_id: ACHAL2009
+  components: {corn_steep_liquor: 30.0}
+  sterilisation: autoclave
+  notes: 30 g/L of liquor at ~50 % dry matter.
+
+lml_15:
+  name: Lactose mother liquor medium, 15 g/L (Achal et al. 2009)
+  source_id: ACHAL2009
+  components: {lactose_mother_liquor: 15.0}
+  sterilisation: autoclave
+
+chicken_manure_effluent:
+  name: Chicken manure biogas-plant effluent used as the cultivation medium (Yoosathaporn et al. 2016)
+  source_id: YOOSATHAPORN2016
+  components: {chicken_manure_effluent: 1000.0}
+  sterilisation: autoclave
+  notes: The effluent replaces the water and the nutrients; 1000 g/L = the whole volume.
+
+food_grade_ye_20:
+  name: Food-grade yeast extract medium, 20 g/L (Omoregie et al. 2019)
+  source_id: OMOREGIE2019
+  components: {food_grade_yeast_extract: 20.0}
+  sterilisation: autoclave
+
+nb_8:
+  name: Nutrient broth, 8 g/L (HiMedia strength)
+  source_id: HOLECEK2024
+  components: {beef_extract: 0.6154, yeast_extract: 1.2308, peptone: 3.0769, sodium_chloride: 3.0769}
+  sterilisation: autoclave
+
+bg11_cyanobacteria:
+  name: "BG-11 medium for cyanobacteria (simplified: sodium nitrate 1.5 g/L, K2HPO4 0.04, MgSO4 0.075, CaCl2 0.036, Na2CO3 0.02 g/L)"
+  source_id: PORTER2021
+  components: {sodium_nitrate: 1.5, dipotassium_phosphate: 0.04, magnesium_sulfate_heptahydrate: 0.075, calcium_chloride: 0.036, sodium_carbonate: 0.02}
+  sterilisation: autoclave
+
+denitrification_medium:
+  name: Denitrifying culture medium (sodium acetate 2 g/L, sodium nitrate 1 g/L, KH2PO4 0.5 g/L, MgSO4 0.1 g/L; van Paassen 2010 type)
+  source_id: VANPAASSEN2010
+  components: {sodium_acetate: 2.0, sodium_nitrate: 1.0, monopotassium_phosphate: 0.5, magnesium_sulfate_heptahydrate: 0.1}
+  sterilisation: autoclave

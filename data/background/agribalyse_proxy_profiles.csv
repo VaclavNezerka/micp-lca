@@ -1,0 +1,113 @@
+process_id,agribalyse_code,lci_name,comment,category_code,value_per_kg,stages
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",GWP-total,7.4477923100000005,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",ODP,5.6839517999999997e-08,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",AP,0.1240741393,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",EP-freshwater,0.000375554695,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",EP-marine,0.028487549129999998,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",EP-terrestrial,0.5363481515,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",POCP,0.013996189700000002,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",ADP-minerals&metals,1.3508647849999999e-05,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",ADP-fossil,33.878824,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",WDP,0.7093099230000001,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",PM,8.33549318e-07,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",IRP,0.51045094,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",ETP-fw,73.66034966999999,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",HTP-c,3.47924184e-09,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",HTP-nc,1.386636537e-07,Agriculture+Transformation
+agb_skimmed_milk_powder,19054,"Milk, powder, skimmed, non rehydrated","Milk, powder, skimmed – proxy profile for casein-derived peptone/tryptone",SQP,294.02246665,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",GWP-total,2.179557998,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",ODP,1.83845553e-08,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",AP,0.038780383,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",EP-freshwater,0.00030771268909999996,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",EP-marine,0.010677231061,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",EP-terrestrial,0.16474480612,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",POCP,0.005373600171,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",ADP-minerals&metals,7.10389556e-06,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",ADP-fossil,14.9244175,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",WDP,0.53453874,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",PM,2.691428997e-07,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",IRP,0.313011446,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",ETP-fw,69.17446695000001,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",HTP-c,1.4758890328e-09,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",HTP-nc,2.700485943e-08,Agriculture+Transformation
+agb_gelatine_dried,11007,"Gelatine, dried","Gelatine, dried – proxy profile for animal by-product peptone / beef extract",SQP,130.7056102,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,GWP-total,0.9657447838000001,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,ODP,9.661521e-09,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,AP,0.004007800956,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,EP-freshwater,0.0002947660168,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,EP-marine,0.012240869679,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,EP-terrestrial,0.013990766918,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,POCP,0.00214532086,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,ADP-minerals&metals,4.430065152e-06,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,ADP-fossil,5.0398447,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,WDP,1.0194723639,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,PM,3.0667805689999995e-08,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,IRP,0.088040855,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,ETP-fw,44.879679018000004,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,HTP-c,1.7446028636999998e-09,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,HTP-nc,8.206185534999999e-09,Agriculture+Transformation
+agb_soya_flour,20900,Soya flour,Soya flour – proxy profile for soy peptone,SQP,165.34162033299998,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,GWP-total,1.2449667,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,ODP,1.794806e-08,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,AP,0.011866771,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,EP-freshwater,0.00045553748,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,EP-marine,0.0053642812,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,EP-terrestrial,0.043411646,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,POCP,0.0049909778,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,ADP-minerals&metals,1.273107e-05,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,ADP-fossil,12.274298,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,WDP,4.0750407,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,PM,1.0066999e-07,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,IRP,0.044866289,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,ETP-fw,37.435619,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,HTP-c,4.483225e-10,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,HTP-nc,1.1980058e-08,Agriculture+Transformation
+agb_maize_starch,9510,Maize/corn starch,Maize/corn starch – proxy profile for glucose,SQP,87.525759,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",GWP-total,0.59386855,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",ODP,7.635271e-09,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",AP,0.016113855,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",EP-freshwater,0.00015787181,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",EP-marine,0.0051640155,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",EP-terrestrial,0.068920894,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",POCP,0.0027937034,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",ADP-minerals&metals,3.4623381e-06,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",ADP-fossil,6.3693459,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",WDP,2.047335,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",PM,1.1998965e-07,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",IRP,0.0244552,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",ETP-fw,6.1688413,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",HTP-c,3.2296311e-11,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",HTP-nc,-1.4993639e-08,Agriculture+Transformation
+agb_sugar_white,31016,"Sugar, white","Sugar, white – proxy profile for yeast extract, malt extract and lactic acid / calcium lactate (sugar-based fermentation products)",SQP,30.459523,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",GWP-total,13.305081000000001,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",ODP,1.8293688799999998e-07,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",AP,0.2260870832,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",EP-freshwater,0.00318672848,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",EP-marine,0.1022034094,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",EP-terrestrial,0.9397356259999999,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",POCP,0.053637975299999995,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",ADP-minerals&metals,6.30788553e-05,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",ADP-fossil,263.186467,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",WDP,4.68038872,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",PM,1.573968483e-06,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",IRP,8.9501445,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",ETP-fw,518.4270311,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",HTP-c,1.3994122440000001e-08,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",HTP-nc,2.19859113e-07,Agriculture+Transformation
+agb_egg_white_powder,22004,"Egg white, powder","Egg white, powder – alternative animal protein powder profile",SQP,1188.6380271,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",GWP-total,0.7158275,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",ODP,8.5923575e-09,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",AP,0.0026715671199999996,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",EP-freshwater,0.000199675358,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",EP-marine,0.007790192160000001,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",EP-terrestrial,0.00913051527,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",POCP,0.00187310513,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",ADP-minerals&metals,2.97462462e-06,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",ADP-fossil,6.788223299999999,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",WDP,0.647859991,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",PM,2.0834601e-08,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",IRP,0.186019358,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",ETP-fw,70.834468,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",HTP-c,1.106692434e-09,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",HTP-nc,5.64434341e-09,Agriculture+Transformation
+agb_soy_protein_textured,20591_2,"Soy protein, textured, dehydrated, from soy flour","Soy protein, textured, dehydrated – alternative plant protein profile",SQP,103.50304125,Agriculture+Transformation
