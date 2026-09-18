@@ -200,8 +200,9 @@ def fig_system_boundary() -> None:
     box(60.8, 40.6, 16.2, 8.2, "Casting / mixing\nsaline, HCl,\nvibration")
     box(43, 30.4, 16.2, 8.2, "Biocementation\n$n$ doses × $V$; curing\nat $T$; chamber heat loss")
     box(60.8, 30.4, 16.2, 8.2, "Drying; effluent\ntreatment (NH$_3$\nstripping / struvite)")
-    box(43, 19.4, 34, 8.6, "Direct flows: CO$_2$ (fossil / biogenic), NH$_3$, NH$_4^+$, N$_2$O,\nCl$^-$, residual organics; carbonation uptake\nof atmospheric CO$_2$ by the portlandite of the fines", fc="#fdeeee")
-    box(43, 8.8, 34, 8.0, "Biocemented block\nfunctional units: 1 kg · 1 m³ · 1 m³·MPa · 1 kg CaCO$_3$", fc="#fff5dd", fs=7.6)
+    # the direct flows sit under the biocementation step and the product under the drying step, so that no arrow crosses a box
+    box(43, 8.8, 16.2, 19.2, "Direct flows:\nCO$_2$ (fossil / biogenic),\nNH$_3$, NH$_4^+$, N$_2$O, Cl$^-$,\nresidual organics;\ncarbonation uptake of\natmospheric CO$_2$ by the\nportlandite of the fines", fc="#fdeeee", fs=6.8)
+    box(60.8, 8.8, 16.2, 10.2, "Biocemented block\nfunctional units: 1 kg, 1 m³,\n1 m³·MPa, 1 kg CaCO$_3$", fc="#fff5dd", fs=7.2)
     # C and D
     box(79.5, 8.8, 11, 8.0, "Demolition,\ntransport\n50 km")
     box(79.5, 19.4, 11, 8.6, "Inert landfill\nor recycling")
@@ -211,7 +212,7 @@ def fig_system_boundary() -> None:
     arrow(40.5, 37.5, 43, 44.7); arrow(40.5, 34.5, 43, 34.5)
     arrow(59.2, 44.7, 60.8, 44.7); arrow(68.9, 40.6, 68.9, 38.6)
     arrow(59.2, 34.5, 60.8, 34.5)
-    arrow(51.1, 30.4, 51.1, 28); arrow(68.9, 30.4, 68.9, 16.8)
+    arrow(51.1, 30.4, 51.1, 28.0); arrow(68.9, 30.4, 68.9, 19.0)
     arrow(77, 12.8, 79.5, 12.8)
     arrow(85, 16.8, 85, 19.4)
     arrow(77, 34.5, 92.5, 34.5, ls="--", color="#72b7b2")
