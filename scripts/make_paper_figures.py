@@ -31,6 +31,7 @@ from micp_lca import load_data, run_scenario  # noqa: E402
 from micp_lca.benchmarks import benchmark_impacts, compare_with_status_quo  # noqa: E402
 from micp_lca.cost import cost_summary  # noqa: E402
 from micp_lca.parametric import available_parameters, describe_sweep, find_parameter, sweep  # noqa: E402
+from micp_lca.inventory import Params, build_inventory  # noqa: E402
 from micp_lca.sensitivity import oat_sensitivity  # noqa: E402
 from micp_lca.uncertainty import MCSettings, monte_carlo, pedigree_gsd  # noqa: E402
 
@@ -1042,6 +1043,16 @@ def main() -> None:
     macro("nExperimental", len(data.experimental), "{:d}"); macro("nPrices", len(data.prices), "{:d}"); macro("nLitResults", len(data.literature_results), "{:d}")
     macro("nCFsubset", len(data.characterization_factors), "{:d}"); macro("nCFfull", len(data.cf_full()), "{:,d}")
     macro("nSweepParams", len(available_parameters("SP_lab_protocol_90d", data)), "{:d}")
+    # what the Monte Carlo analysis samples (Section 3.6)
+    macro("nScaleupRanges", len(Params(data.scaleup, "industrial").ranges("industrial")), "{:d}")
+    macro("nLitRanges", sum(1 for q in data.background.values() if q.gwp_min and q.gwp_max and q.gwp_max > q.gwp_min > 0), "{:d}")
+    obd_gsd = {round(pedigree_gsd(q.pedigree, q.basic_uncertainty), 2) for q in data.background.values() if q.data_type == "oekobaudat"}
+    macro("gsdOBD", min(obd_gsd) if len(obd_gsd) == 1 else f"{min(obd_gsd):.2f}--{max(obd_gsd):.2f}", "{:.2f}")
+    for s in ["GYP_WCFC_single_dose", "SP_lab_protocol_90d"]:
+        used = [data.background[f.key] for f in build_inventory(s, data).flows if f.kind == "background"]
+        used = {q.process_id: q for q in used}.values()
+        macro(f"nMCbg{s}", sum(1 for q in used if q.data_type != "secondary_material" and q.gwp_any), "{:d}")
+        macro(f"nMCbgLit{s}", sum(1 for q in used if q.gwp_min and q.gwp_max and q.gwp_max > q.gwp_min > 0), "{:d}")
 
     # headline numbers ---------------------------------------------------------------------
     for s, r in res_kg.items():
